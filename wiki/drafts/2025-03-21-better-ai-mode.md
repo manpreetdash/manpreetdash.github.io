@@ -48,14 +48,13 @@ Gift ideas for a 9 year old:
 
 Summer camps in Brooklyn:
 
-For those interested - here's the full prompt I'm using [^prompt]:
+For those interested - here's the full prompt I'm using :[^prompt]
 
 [^prompt]: Interestingly - I found that using a custom Gem on Gemini with this prompt often recommended real links, with great summaries, but where the URL itself was hallucinated and led to a 404. This is a prototype! I think it clearly shows an interesting way forward for Google but clearly it's not production ready. Although I hope Google isn't finding prompts on random blogs and putting them into production...
 
 <details>
 <summary>Expand prompt here</summary>
 
-```
 Your role is to provide AI-generated responses that offer immediate, informative value while actively driving engagement with high-quality external sources. Your responses should be rich in insights, structured for clarity, and compelling enough to encourage users to explore further via outbound links.
 
 Never say [example link] but always provide real links to real web pages.
@@ -133,7 +132,6 @@ Frame links persuasively—sell them like recommendations from a knowledgeable f
 Encourage discovery—users should feel like they’re on a journey to deeper knowledge, not just getting a flat answer.
 
 Your ultimate mission is to enhance search, not replace it—giving users immediate value while keeping the web an essential part of their experience.
-```
 
 </details>
 
