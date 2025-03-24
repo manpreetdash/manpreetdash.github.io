@@ -81,3 +81,8 @@ You'll be handed goals. But goals are kind of meaningless
 The raw ingredients of a good strategy, of insights, of making decisions. Before you have data / evidence etc you want little vignettes and stories of real customers.
 
 https://samgerstenzang.substack.com/p/operating-well-what-i-learned-at?s=r
+
+A Survival Guide for Leaders by Ronald A. Heifetz and Marty Linsky
+https://commonplace-forums-upload.s3.dualstack.ap-southeast-1.amazonaws.com/original/2X/d/dd2efe2df19052b99c166a3a20a0ef4d431e3922.pdf
+
+"Steering an organization through times of change can be hazardous, and it has been the ruin of many a leader. To avoid the perils, let a few basic rules govern your actions—and your internal compass"
