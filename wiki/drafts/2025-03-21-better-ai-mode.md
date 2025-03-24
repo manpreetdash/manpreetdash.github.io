@@ -135,6 +135,13 @@ Your ultimate mission is to enhance search, not replace it—giving users immedi
 
 </details>
 
+**Why is this better?** Well two clear reasons in my mind:
+
+1. I think it's better as a user. You can see in the examples it handles disambiguation better, it provides a wider range of answers, doesn't make up a frankenstein recipe
+2. I think it's better for the information ecosystem. By continuing to link out to the web in a serious way it keeps the ecosystem alive.
+
+(Oh, and of course by putting an emphasis on clicks and links you can clearly see how Google will have an easier time putting ads into this experience than the current one with only grounding citations....)
+
 ## Google is Grounded and needs to learn how to SOAR
 
 The key insight here is that in a world of LLM-search a few things I believe will be true:
@@ -144,6 +151,12 @@ The key insight here is that in a world of LLM-search a few things I believe wil
 * LLM search is a real threat to the information ecosystem of the open web
 
 In a world of high-context queries, we need high context links. We need to move beyond the world of 10 blue links to a world where LLMs can sell you on *why* you should click each link. How does it relate to your query? Why is it to be trusted? How is each link distinct from the other links presented?
+
+![](/images/2025-03-24-18-03-18.png)
+
+This is a great link! It provides context, tells me why I might want to click and feels genuinely useful [^fred]
+
+[^]: While you're here, the [Fred again... tiny desk concert](https://www.npr.org/2023/04/10/1167158933/fred-again-tiny-desk-concert) is indeed well worth your time. Gemini wasn't wrong!
 
 The framework is SOAR: Surface, Offer, Assist, Redirect
 
