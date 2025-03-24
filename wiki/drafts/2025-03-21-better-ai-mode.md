@@ -28,6 +28,8 @@ Unfortunately, I think somewhere along the lines we confused a technical process
 
 The end result is AI Overviews and AI Mode that almost never link out. And when they do link out, the best we get is essentially a footnote or citation:
 
+![](/images/ai-citations.png)
+
 Instead of embracing the advantage of the web index, Google is grounding themselves with an experience that hoards clicks, reduces clicks out to the web and relentlessly summarizes. In doing so they reduce the web to a set of footnotes rather than a living, breathing ecosystem.
 
 ## A Better Way
@@ -39,6 +41,8 @@ I believe there is - and ironically enough I found that you can easily prototype
 Let's look at some example - with the current AI mode on the left and my attempt at an improved response on the right.
 
 Tomato soup recipe:
+
+![](/images/tomato-soup-recipe.png)
 
 Gift ideas for a 9 year old:
 
