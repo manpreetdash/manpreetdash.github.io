@@ -10,9 +10,9 @@ For decades, Google's advantage has been the open web. Billions of pages indexed
 
 I recently got access to "AI mode" - the latest experiment from Google to rethink how search works in the era of LLMs.
 
-Both
-
 ![](/images/ai-overviews-ai-mode.png)
+
+Barely a link in sight. Search has turned into a dead-end.
 
 ## Google is Grounded
 
