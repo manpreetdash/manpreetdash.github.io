@@ -177,6 +177,10 @@ So if you have a stake in the web (see my disclosures below) I suggest instead o
 
 
 
+---
+
+Notes and discards past here.
+
 
 ## How we Got Here
 
@@ -194,35 +198,4 @@ https://chatgpt.com/c/67e082e6-4adc-8004-820c-108dafbe898f
 
 https://eugeneyan.com/writing/recsys-llm/
 
-
-
-
---
-
-Title: Google Is Grounded—It Needs to Learn How to SOAR
-
-For decades, Google had the greatest competitive advantage in tech: the open web. Billions of pages, created and maintained by humans, optimized for discovery, all pointing to one gateway—Google search. But in the era of AI assistants and LLM-powered search, Google is squandering that advantage.
-
-Instead of embracing the web as a launchpad, it’s grounding its AI in it—literally. “Grounded” LLMs aim to fact-check and source their answers from the web. It sounds responsible. But in practice, it makes Google cautious, reactive, and oddly stingy with clicks. AI outputs summarize instead of inspire. They hoard instead of hand off. And in doing so, they reduce the web to a set of footnotes rather than a living, breathing ecosystem.
-
-Let me say it clearly: grounding AI in the web is not enough. Google needs to learn how to SOAR.
-
-SOAR = Surface, Offer, Assist, Redirect
-This is how a truly web-native AI assistant would behave:
-
-Surface
-AI should surface high-quality content in surprising, delightful ways—not just stack overflow threads and Wikipedia articles. Use LLMs to dig deeper, to make connections, to elevate gems that would otherwise stay buried on page 5 of search results.
-
-Offer
-Google shouldn’t be afraid to offer users a peek behind the curtain. Make the AI a compelling pitch person. “Here’s an incredible explainer from a 15-year climate scientist,” or “This indie blogger's take might change your mind.” Sell the click. Make it irresistible.
-
-Assist
-The assistant shouldn’t be an endpoint. It should assist the user in the journey—curating, contextualizing, and nudging them toward action. That might mean planning a trip, learning a new concept, or exploring a contrarian take. The AI isn’t the answer. It’s the co-pilot.
-
-Redirect
-And most importantly: redirect. Let go of the instinct to keep users inside the AI box. The best assistants know when to get out of the way. Want to build trust? Show your sources. Send traffic to creators. Build a web worth returning to.
-
-The real opportunity isn’t to replace the web—it’s to revive it.
-
-Google’s old success came from indexing the web. Its future depends on inspiring people to explore it again. That means moving from grounded LLMs to AI systems that SOAR—that lift the user up, carry them forward, and drop them gently into the next great discovery.
 
