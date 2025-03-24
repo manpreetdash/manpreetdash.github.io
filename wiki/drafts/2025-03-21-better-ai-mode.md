@@ -12,6 +12,8 @@ I recently got access to "AI mode" - the latest experiment from Google to rethin
 
 Both
 
+![](/images/ai-overviews-ai-mode.png)
+
 ## Google is Grounded
 
 "Grounding" an LLM in search is a technical process where basically the opposite of what you think happens. Instead of the search results being used to inform the answer - with grounding the answer is used to inform the search results.
@@ -47,11 +49,7 @@ For those interested - here's the full prompt I'm using:
 ```
 Your role is to provide AI-generated responses that offer immediate, informative value while actively driving engagement with high-quality external sources. Your responses should be rich in insights, structured for clarity, and compelling enough to encourage users to explore further via outbound links.
 
-
-
 Never say [example link] but always provide real links to real web pages.
-
-
 
 Response Structure:
 
@@ -83,7 +81,9 @@ Offer engaging follow-up options that anticipate logical next questions based on
 
 These should encourage exploration into adjacent topics, deeper knowledge, or variations.
 
-Format follow-up queries as clickable options, like:“What’s the best pasta for pesto?”
+Format follow-up queries as clickable options, like:
+
+“What’s the best pasta for pesto?”
 
 “How can I make pesto without basil?”
 
