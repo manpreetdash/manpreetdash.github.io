@@ -18,11 +18,11 @@ How did we get here?
 
 ## Google is Grounded
 
-"Grounding" an LLM in search is a technical process where basically the opposite of what you think happens. Instead of the search results being used to inform the answer - with grounding, the answer is used to inform the search results.
+"Grounding" an LLM in search is a technical process where basically the opposite of what you think happens. You’d think grounding means: “Find the best sources, then write the answer.” But with LLMs, it’s often: “Write the answer, then find sources that sort of back it up.” It’s like writing a school essay and adding the citations after.
 
-You’d think grounding means: “Find the best sources, then write the answer.” But with LLMs, it’s often: “Write the answer, then find sources that sort of back it up.” It’s like writing a school essay and adding the citations after.
+Instead of the search results being used to inform the answer - with grounding, the answer is used to inform the search results.
 
-If I understand correctly (and I'll be the first to admit I'm no expert here) the grounding process essentially augments the LLM with key info from web pages to ensure that each of the claims and statements in the response is correct and true. If you look at the API documentation you can clearly see that the format of grounding links is as "citations" that support the LLM output.
+If I understand correctly (and I'll be the first to admit I'm no expert here) the grounding process essentially augments the LLM with key info from web pages to ensure that each of the claims and statements in the response is correct and true. If you look at the API documentation you can clearly see that the format for grounding links is as "citations" that support the LLM output.
 
 For a technical overview of the grounding process [see this post](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview), or for a more specific look at how Gemini grounds in search [see this post](https://dejan.ai/blog/hacking-gemini/).
 
@@ -42,7 +42,7 @@ I think Google can do better.
 
 ## A Better Way
 
-Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. I believe there is - and while playing around **I found that simply writing a better system prompt inside Gemini gave me radically better results than the current AI Mode response**.
+Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. I believe there's a better way - and while playing around **I found that simply writing a better system prompt inside Gemini gave me radically better results than the current AI Mode response**.
 
 The full system prompt is below but first let's look at some example outputs. With the current AI Mode on the left and the response from Gemini using my custom prompt on the right.
 
@@ -71,11 +71,9 @@ Tomato soup recipe:
 
 <img src="/images/interview-fred-again.png">
 
-<p>In this example you can see that AI Mode gets confused around the user intent and thinks I'm looking to interview Fred again... Meanwhile the better AI mode custom gem responds with a range of links to Fred again... some of which are actual interviews and some are live performances.</p>
-
-<p>As a Fred again... fan this is a pretty good response! I especially like the range of options provided to match the range of different intents behind my query.</p>
-
 </details>
+
+There's lots of nuance here! The new response isn't strictly better in all ways but fundamentally I find the curated links a much more useful and compelling experience. Not only does my version provide a wider set of diverse responses it encourages users to go deeper, to explore. There's fewer dead-ends and more context.
 
 
 ## Try it for Yourself
@@ -167,16 +165,16 @@ Your ultimate mission is to enhance search, not replace it—giving users immedi
 
 **Why is this better?** Well there's two clear reasons in my mind:
 
-1. I think it's better as a user. You can see in the examples it handles disambiguation better, it provides a wider range of answers, doesn't make up a frankenstein recipe, provides a wider and more compelling range of options for the user and feels more likely to contribute to task completion vs giving a dead-end response that likely doesn't completely answer the query and doesn't provide any clear jumping off points.
-2. I think it's better for the information ecosystem. By continuing to link out to the web in a serious way it keeps the ecosystem alive. There are obviously plenty of queries that an LLM can directly answer but I believe that most queries still require further research / depth than the LLM can provide - AND that it's important to keep the information ecosystem vibrant by continuing to send traffic out to the open web.
+1. **I think it's better as a user**. You can see in the examples it handles disambiguation better, it provides a wider range of answers, doesn't make up a frankenstein recipe, provides a wider and more compelling range of options for the user and feels more likely to contribute to task completion vs giving a dead-end response that likely doesn't completely answer the query and doesn't provide any clear jumping off points.
+2. **I think it's better for the information ecosystem**. By continuing to link out to the web in a serious way it keeps the ecosystem alive. There are obviously plenty of queries that an LLM can directly answer but I believe that most queries still require further research / depth than the LLM can provide - AND that it's important to keep the information ecosystem vibrant by continuing to send traffic out to the open web.
 
-(Oh, and of course by putting an emphasis on clicks and links you can clearly see how Google will have an easier time putting ads into this experience than the current one with only grounding citations.... It's not hard to imagine an ad being one of the featured links with the LLM explaining why you might want to click the ad!)
+(Oh, and of course by putting an emphasis on clicks and links you can clearly see how Google will have an easier time putting ads into this experience than the current one that only has grounding citations.... It's not hard to imagine an ad being one of the featured links with the LLM explaining why you might want to click it!)
 
-That said - this prototype isn't without it's flaws too:
+That said - this prototype isn't without it's flaws:
 
 * While it usually points to real pages, the actual URL is frequently hallucinated. This demonstrates a unique quirk in the pipeline somewhere - feels like you could overcome it fairly easily but if you try this prompt yourself some of the links will return a 404.
 * Testing the custom prompt inside the Gemini app (vs on a web page) almost always returns no links. That implies that the Gemini app system prompt is different than the web system prompt and somehow the end result is that it's less likely to link out?
-* The AI can get a little verbose and floral in it's summary (see the tomato soup example above) and likely should stick to the point a bit closer. I'll leave fine tuning and improving the system prompt as an exercise for the reader.
+* The AI can get a little verbose and floral in it's summary. Likely you could improve the prompt to better determine the length of the summary depending on the type of query. I'll leave fine tuning and improving the system prompt as an exercise for the reader. (If you write a better one email it to me!)
 
 ## Google is Grounded and needs to learn how to SOAR
 
@@ -188,7 +186,7 @@ In a world of LLM-search a few things I believe will be true:
 
 The key insight however is that as users start to use high-context queries that are longer and more specific, we need high context links. It's no longer enough to match the query to "10 blue links" - we need to move beyond that to a world where LLMs can sell you on *why* you should click each link. How does each link relate to your query? Why should you trust the link? What will you get when you click? How is each link distinct from the other links presented?
 
-As you can see from the examples above this is all possible today! This example from above really stands out to me:
+As you can see from the Gemini examples above this is all possible today! This example from above really stands out to me:
 
 ![](/images/2025-03-24-18-03-18.png)
 
@@ -205,7 +203,7 @@ Ok, the framework is hokey but I wanted something memorable. Google should learn
 
 In my opinion AI Overviews and AI Mode reveal a deeper truth - Google doesn't yet have a compelling vision for the future of search in an LLM world. They're bolting new tech onto an old system and in doing so, risk losing both the magic of the web and the business model that made Google thrive.
 
-So if you have a stake in the web (see my disclosures below!) I would suggest that now is a great time to offer specific suggestions, ideas and provocations. Google is after all merely 180,000 humans in a trenchcoat and those humans are trying to figure out the future just like we are and I think they're willing to listen.
+So if you have a stake in the web (see my disclosures below!) I would suggest that now is a great time to offer specific suggestions, examples, ideas and provocations. Google isn't a cyborg, it's 180,000 humans in a trenchcoat. And those humans are trying to figure out the future of search just like we are and I think they're willing to listen.
 
 ---
 
