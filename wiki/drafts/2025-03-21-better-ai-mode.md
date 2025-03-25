@@ -154,9 +154,9 @@ In a world of high-context queries, we need high context links. We need to move 
 
 ![](/images/2025-03-24-18-03-18.png)
 
-This is a great link! It provides context, tells me why I might want to click and feels genuinely useful [^fred]
+This is a great link! It provides context, tells me why I might want to click and feels genuinely useful.[^fred]
 
-[^]: While you're here, the [Fred again... tiny desk concert](https://www.npr.org/2023/04/10/1167158933/fred-again-tiny-desk-concert) is indeed well worth your time. Gemini wasn't wrong!
+[^fred]: While you're here, the [Fred again... tiny desk concert](https://www.npr.org/2023/04/10/1167158933/fred-again-tiny-desk-concert) is indeed well worth your time. Gemini wasn't wrong!
 
 The framework is SOAR: Surface, Offer, Assist, Redirect
 
