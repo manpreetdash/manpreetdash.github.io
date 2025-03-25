@@ -4,7 +4,7 @@ subtitle: A short proposal on AI mode and the future of search
 layout: blog
 ---
 
-Here's the punchline - I think Google is missing the mark with their AI search efforts. I have a concrete proposal for how to improve things, and in a way that's better for users *and* in a way that's beneficial to the open web at the same time.
+Here's the punchline - I think Google is missing the mark with their AI search efforts. I have a concrete proposal and a prototype you can try yourself for a new approach - in a way that's better for users *and* in a way that's beneficial to the open web at the same time.
 
 For decades, Google's advantage has been the open web. Billions of pages indexed in milliseconds. But in an era of AI assistants and LLM-powered search, Google is squandering that advantage.
 
@@ -20,6 +20,8 @@ How did we get here?
 
 "Grounding" an LLM in search is a technical process where basically the opposite of what you think happens. Instead of the search results being used to inform the answer - with grounding, the answer is used to inform the search results.
 
+You’d think grounding means: “Find the best sources, then write the answer.” But with LLMs, it’s often: “Write the answer, then find sources that sort of back it up.” It’s like writing a school essay and adding the citations after.
+
 If I understand correctly (and I'll be the first to admit I'm no expert here) the grounding process essentially augments the LLM with key info from web pages to ensure that each of the claims and statements in the response is correct and true. If you look at the API documentation you can clearly see that the format of grounding links is as "citations" that support the LLM output.
 
 For a technical overview of the grounding process [see this post](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview), or for a more specific look at how Gemini grounds in search [see this post](https://dejan.ai/blog/hacking-gemini/).
@@ -34,15 +36,15 @@ It seems fairly likely to me that the grounding process is what's powering the l
 
 Instead of embracing the advantage of the web index, Google is grounding themselves with an experience that reduces clicks out to the web and relentlessly summarizes - often providing dead-end answers. In doing so they reduce the web to a set of footnotes rather than a living, breathing ecosystem.
 
-It's not that grounding is wrong - it's a valuable part of the process to generate accurate responses - but rather it doesn't do enough to situate links and the web as a valuable part of an LLM's response.
+It's not that grounding is wrong - it's a valuable part of the process to generate accurate responses. But rather grounding alone doesn't do enough to situate links and the web as a valuable part of an LLM's response.
 
 I think Google can do better.
 
 ## A Better Way
 
-Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. I believe there is - and while playing around I found that simply writing a better system prompt inside Gemini gave me radically better results than the current AI Mode response.
+Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. I believe there is - and while playing around **I found that simply writing a better system prompt inside Gemini gave me radically better results than the current AI Mode response**.
 
-Let's look at some real examples. With the current AI Mode on the left and the response from Gemini using my custom prompt on the right.
+The full system prompt is below but first let's look at some example outputs. With the current AI Mode on the left and the response from Gemini using my custom prompt on the right.
 
 Tomato soup recipe:
 
