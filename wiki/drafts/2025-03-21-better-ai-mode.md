@@ -76,10 +76,9 @@ Tomato soup recipe:
 </details>
 
 
+## Try it for Yourself
 
-For those interested - here's the full prompt I'm using :[^prompt]
-
-[^prompt]: Interestingly - I found that using a custom Gem on Gemini with this prompt often recommended real links, with great summaries, but where the URL itself was hallucinated and led to a 404. This is a prototype! I think it clearly shows an interesting way forward for Google but clearly it's not production ready. Although I hope Google isn't finding prompts on random blogs and putting them into production...
+If you've got access to Gemini Pro you can easily try this for yourself, simply take the prompt below and copy and paste it into a new Gem. Then every response will use this new system prompt. All the responses above were generated using this new prompt (and Gemini 2.0 Flash)
 
 <details>
 <summary>Expand prompt here</summary>
@@ -164,75 +163,49 @@ Your ultimate mission is to enhance search, not replace it—giving users immedi
 
 </details>
 
-(If you want to replicate this for yourself simply create a custom gem and copy and paste the prompt in. I'm using a Gemini Advanced Flash 2.0 model)
+**Why is this better?** Well there's two clear reasons in my mind:
 
-**Why is this better?** Well two clear reasons in my mind:
+1. I think it's better as a user. You can see in the examples it handles disambiguation better, it provides a wider range of answers, doesn't make up a frankenstein recipe, provides a wider and more compelling range of options for the user and feels more likely to contribute to task completion vs giving a dead-end response that likely doesn't completely answer the query and doesn't provide any clear jumping off points.
+2. I think it's better for the information ecosystem. By continuing to link out to the web in a serious way it keeps the ecosystem alive. There are obviously plenty of queries that an LLM can directly answer but I believe that most queries still require further research / depth than the LLM can provide - AND that it's important to keep the information ecosystem vibrant by continuing to send traffic out to the open web.
 
-1. I think it's better as a user. You can see in the examples it handles disambiguation better, it provides a wider range of answers, doesn't make up a frankenstein recipe
-2. I think it's better for the information ecosystem. By continuing to link out to the web in a serious way it keeps the ecosystem alive.
-
-(Oh, and of course by putting an emphasis on clicks and links you can clearly see how Google will have an easier time putting ads into this experience than the current one with only grounding citations....)
+(Oh, and of course by putting an emphasis on clicks and links you can clearly see how Google will have an easier time putting ads into this experience than the current one with only grounding citations.... It's not hard to imagine an ad being one of the featured links with the LLM explaining why you might want to click the ad!)
 
 That said - this prototype isn't without it's flaws too:
 
-* While it usually points to real pages, the actual URL is frequently hallucinated...
-* Testing this inside the Gemini app almost always returns no links
-* The AI can get a little verbose and floral in it's summary (see the tomato soup example above) and likely should stick to the point a bit closer
+* While it usually points to real pages, the actual URL is frequently hallucinated. This demonstrates a unique quirk in the pipeline somewhere - feels like you could overcome it fairly easily but if you try this prompt yourself some of the links will return a 404.
+* Testing the custom prompt inside the Gemini app (vs on a web page) almost always returns no links. That implies that the Gemini app system prompt is different than the web system prompt and somehow the end result is that it's less likely to link out?
+* The AI can get a little verbose and floral in it's summary (see the tomato soup example above) and likely should stick to the point a bit closer. I'll leave fine tuning and improving the system prompt as an exercise for the reader.
 
 ## Google is Grounded and needs to learn how to SOAR
 
-The key insight here is that in a world of LLM-search a few things I believe will be true:
+In a world of LLM-search a few things I believe will be true:
 
 * Queries will get longer and more complex
 * Overall query volume will increase dramatically
 * LLM search is a real threat to the information ecosystem of the open web
 
-In a world of high-context queries, we need high context links. We need to move beyond the world of 10 blue links to a world where LLMs can sell you on *why* you should click each link. How does it relate to your query? Why is it to be trusted? How is each link distinct from the other links presented?
+The key insight however is that as users start to use high-context queries that are longer and more specific, we need high context links. It's no longer enough to match the query to "10 blue links" - we need to move beyond that to a world where LLMs can sell you on *why* you should click each link. How does each link relate to your query? Why should you trust the link? What will you get when you click? How is each link distinct from the other links presented?
+
+As you can see from the examples above this is all possible today! This example from above really stands out to me:
 
 ![](/images/2025-03-24-18-03-18.png)
 
-This is a great link! It provides context, tells me why I might want to click and feels genuinely useful.[^fred]
+This is a great link! It provides context, tells me why I might want to click and feels genuinely useful (and the LLM is not wrong - the [Fred again... tiny desk concert](https://www.npr.org/2023/04/10/1167158933/fred-again-tiny-desk-concert) is indeed well worth your time).
 
-[^fred]: While you're here, the [Fred again... tiny desk concert](https://www.npr.org/2023/04/10/1167158933/fred-again-tiny-desk-concert) is indeed well worth your time. Gemini wasn't wrong!
+Ok, the framework is hokey but I wanted something memorable. Google should learn how to SOAR: Surface, Offer, Assist, Redirect
 
-The framework is SOAR: Surface, Offer, Assist, Redirect
-
-* **Surface**: AI should surface high-quality content in surprising, delightful ways—not just stack overflow threads and Wikipedia articles. Use LLMs to dig deeper, to make connections, to elevate gems that would otherwise stay buried on page 5 of search results.
-* **Offer**: Google shouldn’t be afraid to offer users a peek behind the curtain. Make the AI a compelling pitch person. “Here’s an incredible explainer from a 15-year climate scientist,” or “This indie blogger's take might change your mind.” Sell the click. Make it irresistible.
-* **Assist**: The assistant shouldn’t be an endpoint. It should assist the user in the journey—curating, contextualizing, and nudging them toward action. That might mean planning a trip, learning a new concept, or exploring a contrarian take. The AI isn’t the answer. It’s the co-pilot.
-* **Redirect**: And most importantly: redirect. Let go of the instinct to keep users inside the AI box. The best assistants know when to get out of the way. Want to build trust? Show your sources. Send traffic to creators. Build a web worth returning to.
-
-Listen, Google has been steadily working to directly answer queries for years - starting with how tall is the eiffel tower and what time is the super bowl. LLMs offer an opportunity to to go further.
+* **Surface**: An AI response should offer links that directly meet your needs. Not just matching the query but matching your intent with specificity. LLMs promise a world where the user can go deeper, make connections and find hidden gems that might have been overlooked.
+* **Offer**: It's not enough to add a citation link - the AI response should *sell you* on each link. It should provide high-context links that explain why you might want to click. “Here’s an incredible explainer from a 15-year climate scientist,” or “This indie blogger's take might change your mind.” Sell the click. Make it irresistible.
+* **Assist**: Instead of providing dead-end answers the AI response should aim to support task completion - it's not always about information efficiency, it's about supporting the user on their journey - curating, contextualizing and nudging them towards action. Less answers and more assistance.
+* **Redirect**: And most importantly, redirect. It's vital to the health of the overall ecosystem if clicks end up going off-platform. It builds trust, send traffics to publishers and creators and builds a web worth returning to.
 
 ## Closing Thoughts
 
-It's clear to me that Google doesn't yet have a vision for what the future of search and the information ecosystem of the web yet. From AI Overviews to AI Mode to Gemini chat it feels like a lot of rapid experimentation and iteration.
+Looking at AI Overviews and AI Mode from the outside it feels clear that Google doesn't yet have a clear vision for the future of search and hasn't yet found a way to integrate LLMs into search in a way that either supports the health of the web or enables Google ad clicks.
 
-So if you have a stake in the web (see my disclosures below) I would suggest that now is a great time to offer specific suggestions, ideas and provocations. Google is after all merely 180,000 humans in a trenchcoat and at those humans are trying to figure out the future just like we are and I think they're willing to listen.
-
-*Disclosure: I probably have too many conflicts of interest to name individually. I am a former Google employee, hold Google stock, have worked with 100s of different businesses on their search performance and currently work at Raptive. I'm also an un-ashamed advocate for the open web. Consider me biased. However, all opinions here are purely my own.*
-
-
+So if you have a stake in the web (see my disclosures below!) I would suggest that now is a great time to offer specific suggestions, ideas and provocations. Google is after all merely 180,000 humans in a trenchcoat and those humans are trying to figure out the future just like we are and I think they're willing to listen.
 
 ---
 
-Notes and discards past here.
-
-
-## How we Got Here
-
-Google's fundamental innovation was the 
-
-https://research.google/blog/effective-large-language-model-adaptation-for-improved-grounding/
-
-Grounding is fundamentally the wrong approach.
-
-Better approach.
-
-Gemini prompt and examples.
-
-https://chatgpt.com/c/67e082e6-4adc-8004-820c-108dafbe898f
-
-https://eugeneyan.com/writing/recsys-llm/
-
+*Disclosure: I probably have too many conflicts of interest to name individually. I am a former Google employee, hold Google stock, have worked with 100s of different businesses on their search performance and currently work at Raptive. I'm also an un-ashamed advocate for the open web. Consider me biased. However, all opinions here are purely my own.*
 
