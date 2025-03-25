@@ -4,7 +4,7 @@ subtitle: A short proposal on AI mode and the future of search
 layout: blog
 ---
 
-Here's the punchline - I think Google is missing the mark with their AI search efforts. In this post I have a concrete proposal and a prototype you can try yourself that shows a different approach for the future of search. A different approach that's better for users *and* in a way that's beneficial to the open web at the same time.
+Here's the punchline - I think Google is missing the mark with their AI search efforts. In this post I have a concrete proposal and a prototype you can try yourself that shows a different approach for the future of search. An approach that's better for users *and* in a way that's beneficial to the open web at the same time.
 
 For decades, Google's advantage has been the open web. Billions of pages indexed in milliseconds. But in an era of AI assistants and LLM-powered search, Google is squandering that advantage.
 
@@ -50,7 +50,7 @@ Tomato soup recipe:
 
 ![](/images/tomato-soup-recipe.png)
 
-<details>
+<details class="pointer">
 <summary>What is llm grounding?</summary>
 
 <img src="/images/llm-grounding.png">
@@ -58,7 +58,7 @@ Tomato soup recipe:
 
 </details>
 
-<details>
+<details class="pointer">
 <summary>What is skiing like in NH?</summary>
 
 <img src="/images/nh-skiing.png">
@@ -66,7 +66,7 @@ Tomato soup recipe:
 
 </details>
 
-<details>
+<details class="pointer">
 <summary>Interview with fred again:</summary>
 
 <img src="/images/interview-fred-again.png">
