@@ -36,7 +36,7 @@ Instead of embracing the advantage of the web index, Google is grounding themsel
 
 Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. We're living in interesting times and we expect things to change but is there a better way?
 
-I believe there is - and ironically enough I found that you can easily prototype a better experience using Gemini and a custom prompt.
+I believe there is - and while playing around I found that simply writing a better system prompt inside Gemini gave me radically better results.
 
 Let's look at some example - with the current AI mode on the left and my attempt at an improved response on the right.
 
@@ -47,6 +47,19 @@ Tomato soup recipe:
 Gift ideas for a 9 year old:
 
 Summer camps in Brooklyn:
+
+<details>
+<summary>Interview with fred again:</summary>
+
+![](/images/interview-fred-again.png)
+
+In this example you can see that AI Mode gets confused around the user intent and thinks I'm looking to interview Fred again... Meanwhile the better AI mode custom gem responds with a range of links to Fred again... some of which are actual interviews and some are live performances.
+
+As a Fred again... fan this is a pretty good response! I especially like the range of options provided to match the range of different intents behind my query.
+
+</details>
+
+
 
 For those interested - here's the full prompt I'm using :[^prompt]
 
