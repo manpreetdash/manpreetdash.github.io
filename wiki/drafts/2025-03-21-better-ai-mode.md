@@ -4,51 +4,65 @@ subtitle: A short proposal on AI mode and the future of search
 layout: blog
 ---
 
-Here's the summary - I think Google is misguided in their AI search efforts. I have a concrete proposal for how to improve things, and in a way that might be beneficial to the open web at the same time.
+Here's the punchline - I think Google is missing the mark with their AI search efforts. I have a concrete proposal for how to improve things, and in a way that's better for users *and* in a way that's beneficial to the open web at the same time.
 
 For decades, Google's advantage has been the open web. Billions of pages indexed in milliseconds. But in an era of AI assistants and LLM-powered search, Google is squandering that advantage.
 
-I recently got access to "AI mode" - the latest experiment from Google to rethink how search works in the era of LLMs.
+First with AI Overviews, then most recently with AI Mode - both experiments from Google seem short-sighted as experiences:
 
 ![](/images/ai-overviews-ai-mode.png)
 
 Not a link in sight, search has turned into a dead-end.
 
+How did we get here?
+
 ## Google is Grounded
 
-"Grounding" an LLM in search is a technical process where basically the opposite of what you think happens. Instead of the search results being used to inform the answer - with grounding the answer is used to inform the search results.
+"Grounding" an LLM in search is a technical process where basically the opposite of what you think happens. Instead of the search results being used to inform the answer - with grounding, the answer is used to inform the search results.
 
-Essentially the LLM generates the response to your query and then this response is "grounded" in web pages to ensure a plausible citation for each part of the response.
+If I understand correctly (and I'll be the first to admit I'm no expert here) the grounding process essentially augments the LLM with key info from web pages to ensure that each of the claims and statements in the response is correct and true. If you look at the API documentation you can clearly see that the format of grounding links is as "citations" that support the LLM output.
 
-For a more technical deep dive try here: 
+For a technical overview of the grounding process [see this post](https://cloud.google.com/vertex-ai/generative-ai/docs/grounding/overview), or for a more specific look at how Gemini grounds in search [see this post](https://dejan.ai/blog/hacking-gemini/).
 
-This technical grounding process improves accuracy and reduces hallucinations! So it's an effective part of the response.
+The grounding process improves accuracy and reduces hallucinations! So it's an effective part of the response.
 
 Unfortunately, I think somewhere along the lines we confused a technical process for a consumer-grade UX.
 
-The end result is AI Overviews and AI Mode that almost never link out. And when they do link out, the best we get is essentially a footnote or citation:
+It seems fairly likely to me that the grounding process is what's powering the links included in both AI Overviews and AI Mode. They barely link out at all and when they do the best we get is essentially a footnote or citation:
 
 ![](/images/ai-citations.png)
 
-Instead of embracing the advantage of the web index, Google is grounding themselves with an experience that hoards clicks, reduces clicks out to the web and relentlessly summarizes. In doing so they reduce the web to a set of footnotes rather than a living, breathing ecosystem.
+Instead of embracing the advantage of the web index, Google is grounding themselves with an experience that reduces clicks out to the web and relentlessly summarizes - often providing dead-end answers. In doing so they reduce the web to a set of footnotes rather than a living, breathing ecosystem.
 
 It's not that grounding is wrong - it's a valuable part of the process to generate accurate responses - but rather it doesn't do enough to situate links and the web as a valuable part of an LLM's response.
 
+I think Google can do better.
+
 ## A Better Way
 
-Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. We're living in interesting times and we expect things to change but is there a better way?
+Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. I believe there is - and while playing around I found that simply writing a better system prompt inside Gemini gave me radically better results than the current AI Mode response.
 
-I believe there is - and while playing around I found that simply writing a better system prompt inside Gemini gave me radically better results.
-
-Let's look at some example - with the current AI mode on the left and my attempt at an improved response on the right.
+Let's look at some real examples. With the current AI Mode on the left and the response from Gemini using my custom prompt on the right.
 
 Tomato soup recipe:
 
 ![](/images/tomato-soup-recipe.png)
 
-Gift ideas for a 9 year old:
+<details>
+<summary>What is llm grounding?</summary>
 
-Summer camps in Brooklyn:
+<img src="/images/llm-grounding.png">
+
+
+</details>
+
+<details>
+<summary>What is skiing like in NH?</summary>
+
+<img src="/images/nh-skiing.png">
+
+
+</details>
 
 <details>
 <summary>Interview with fred again:</summary>
@@ -159,6 +173,12 @@ Your ultimate mission is to enhance search, not replace it—giving users immedi
 
 (Oh, and of course by putting an emphasis on clicks and links you can clearly see how Google will have an easier time putting ads into this experience than the current one with only grounding citations....)
 
+That said - this prototype isn't without it's flaws too:
+
+* While it usually points to real pages, the actual URL is frequently hallucinated...
+* Testing this inside the Gemini app almost always returns no links
+* The AI can get a little verbose and floral in it's summary (see the tomato soup example above) and likely should stick to the point a bit closer
+
 ## Google is Grounded and needs to learn how to SOAR
 
 The key insight here is that in a world of LLM-search a few things I believe will be true:
@@ -188,7 +208,7 @@ Listen, Google has been steadily working to directly answer queries for years - 
 
 It's clear to me that Google doesn't yet have a vision for what the future of search and the information ecosystem of the web yet. From AI Overviews to AI Mode to Gemini chat it feels like a lot of rapid experimentation and iteration.
 
-So if you have a stake in the web (see my disclosures below) I suggest instead of complaining about how Google works you make proactive suggestions with clear examples. Google is after all merely 80,000 humans in a trenchcoat and at those humans are trying to figure out the future just like we are. They'll listen to your ideas.
+So if you have a stake in the web (see my disclosures below) I would suggest that now is a great time to offer specific suggestions, ideas and provocations. Google is after all merely 180,000 humans in a trenchcoat and at those humans are trying to figure out the future just like we are and I think they're willing to listen.
 
 *Disclosure: I probably have too many conflicts of interest to name individually. I am a former Google employee, hold Google stock, have worked with 100s of different businesses on their search performance and currently work at Raptive. I'm also an un-ashamed advocate for the open web. Consider me biased. However, all opinions here are purely my own.*
 
