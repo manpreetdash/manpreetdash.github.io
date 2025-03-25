@@ -1,6 +1,6 @@
 ---
 title: Google is Grounded and Needs to Learn How to Soar
-subtitle: A short proposal on AI mode and the future of search
+subtitle: A short proposal for the future of search
 layout: blog
 ---
 
