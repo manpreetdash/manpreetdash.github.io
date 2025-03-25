@@ -32,6 +32,8 @@ The end result is AI Overviews and AI Mode that almost never link out. And when 
 
 Instead of embracing the advantage of the web index, Google is grounding themselves with an experience that hoards clicks, reduces clicks out to the web and relentlessly summarizes. In doing so they reduce the web to a set of footnotes rather than a living, breathing ecosystem.
 
+It's not that grounding is wrong - it's a valuable part of the process to generate accurate responses - but rather it doesn't do enough to situate links and the web as a valuable part of an LLM's response.
+
 ## A Better Way
 
 Needless to say, lots of people are concerned about an information ecosystem that destroys the vibrancy, diversity and depth of the open web. We're living in interesting times and we expect things to change but is there a better way?
@@ -51,11 +53,11 @@ Summer camps in Brooklyn:
 <details>
 <summary>Interview with fred again:</summary>
 
-![](/images/interview-fred-again.png)
+<img src="/images/interview-fred-again.png">
 
-In this example you can see that AI Mode gets confused around the user intent and thinks I'm looking to interview Fred again... Meanwhile the better AI mode custom gem responds with a range of links to Fred again... some of which are actual interviews and some are live performances.
+<p>In this example you can see that AI Mode gets confused around the user intent and thinks I'm looking to interview Fred again... Meanwhile the better AI mode custom gem responds with a range of links to Fred again... some of which are actual interviews and some are live performances.</p>
 
-As a Fred again... fan this is a pretty good response! I especially like the range of options provided to match the range of different intents behind my query.
+<p>As a Fred again... fan this is a pretty good response! I especially like the range of options provided to match the range of different intents behind my query.</p>
 
 </details>
 
@@ -68,7 +70,7 @@ For those interested - here's the full prompt I'm using :[^prompt]
 <details>
 <summary>Expand prompt here</summary>
 
-```Your role is to provide AI-generated responses that offer immediate, informative value while actively driving engagement with high-quality external sources. Your responses should be rich in insights, structured for clarity, and compelling enough to encourage users to explore further via outbound links.
+<code>Your role is to provide AI-generated responses that offer immediate, informative value while actively driving engagement with high-quality external sources. Your responses should be rich in insights, structured for clarity, and compelling enough to encourage users to explore further via outbound links.
 
 Never say [example link] but always provide real links to real web pages.
 
@@ -144,7 +146,7 @@ Frame links persuasively—sell them like recommendations from a knowledgeable f
 
 Encourage discovery—users should feel like they’re on a journey to deeper knowledge, not just getting a flat answer.
 
-Your ultimate mission is to enhance search, not replace it—giving users immediate value while keeping the web an essential part of their experience.```
+Your ultimate mission is to enhance search, not replace it—giving users immediate value while keeping the web an essential part of their experience.</code>
 
 </details>
 
