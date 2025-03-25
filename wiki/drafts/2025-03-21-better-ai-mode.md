@@ -203,7 +203,7 @@ Ok, the framework is hokey but I wanted something memorable. Google should learn
 
 ## Closing Thoughts
 
-Looking at AI Overviews and AI Mode from the outside it feels clear that Google doesn't yet have a clear vision for the future of search and hasn't yet found a way to integrate LLMs into search in a way that either supports the health of the web or enables Google ad clicks.
+In my opinion AI Overviews and AI Mode reveal a deeper truth - Google doesn't yet have a compelling vision for the future of search in an LLM world. They're bolting new tech onto an old system and in doing so, risk losing both the magic of the web and the business model that made Google thrive.
 
 So if you have a stake in the web (see my disclosures below!) I would suggest that now is a great time to offer specific suggestions, ideas and provocations. Google is after all merely 180,000 humans in a trenchcoat and those humans are trying to figure out the future just like we are and I think they're willing to listen.
 
