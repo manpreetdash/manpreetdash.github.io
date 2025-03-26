@@ -2,6 +2,7 @@
 title: Google is Grounded and Needs to Learn How to Soar
 subtitle: A short proposal for the future of search
 layout: blog
+og: https://tomcritchlow.com/images/better-ai-og.png
 ---
 
 Here's the punchline - I think Google is missing the mark with their AI search efforts. In this post I have a concrete proposal and a prototype you can try yourself that shows a different approach for the future of search. An approach that's better for users *and* in a way that's beneficial to the open web at the same time.
