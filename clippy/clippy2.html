@@ -97,7 +97,7 @@
     <div id="aiChatModal" class="fixed inset-0 z-[120] bg-gray-100 dark:bg-gray-900 hidden flex-col">
         <div class="flex-shrink-0 bg-white dark:bg-gray-800 shadow-md p-4 flex items-center justify-between"> <h2 class="text-lg font-semibold text-gray-800 dark:text-white">AI Recipe Assistant</h2> <button id="closeAiChatButton" class="text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-white"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg> </button> </div>
         <div id="aiChatMessages" class="flex-grow overflow-y-auto p-4 space-y-4"> </div>
-        <div class="flex-shrink-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"> <div class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-2"> <input type="text" placeholder="Tap message area to continue chat..." class="flex-grow bg-transparent text-gray-700 dark:text-gray-200 focus:outline-none text-sm" disabled> <button class="ml-2 text-blue-500 hover:text-blue-600"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="m3 3 3 9-3 9 19-9Z"/><path d="M6 12h16"/></svg> </button> </div> </div>
+        <div class="flex-shrink-0 p-4 border-t border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800"> <div class="flex items-center bg-gray-100 dark:bg-gray-700 rounded-full px-4 py-2"> <input type="text" placeholder="Tap anywhere above to continue chat..." class="flex-grow bg-transparent text-gray-700 dark:text-gray-200 focus:outline-none text-sm" disabled> <button class="ml-2 text-blue-500 hover:text-blue-600"> <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send-horizontal"><path d="m3 3 3 9-3 9 19-9Z"/><path d="M6 12h16"/></svg> </button> </div> </div>
     </div>
 
 
@@ -116,34 +116,20 @@
         const communityData = [ /* Truncated */ { id: "comm1", name: "Natasha's Kitchen Fans", description: "Sharing classic recipes and kitchen tips.", imageUrl: "https://placehold.co/600x150/e0f2fe/0ea5e9?text=Natasha's+Kitchen+Community", sampleConversations: ["Anyone tried the beef stroganoff? Amazing!", "My family loved the chocolate cake!", "Tips for getting kids to eat veggies?"] }, { id: "comm2", name: "Spend With Pennies Savers", description: "Budget-friendly meals and smart shopping.", imageUrl: "https://placehold.co/600x150/dcfce7/16a34a?text=Spend+With+Pennies+Community", sampleConversations: ["Best casserole for leftovers?", "Made the chicken scallopini - so easy!", "Where do you find the best deals on groceries?"] }, { id: "comm3", name: "Love & Lemons Fresh Finds", description: "Celebrating seasonal ingredients and vibrant food.", imageUrl: "https://placehold.co/600x150/fef9c3/ca8a04?text=Love+&+Lemons+Community", sampleConversations: ["The roasted asparagus is my go-to side.", "What's everyone making with spring produce?", "Carrot cake success! Thanks for the recipe."] }, { id: "comm4", name: "RecipeTin Eats Enthusiasts", description: "Bold flavours and foolproof recipes from Nagi.", imageUrl: "https://placehold.co/600x150/fce7f3/db2777?text=RecipeTin+Eats+Community", sampleConversations: ["Those chocolate chip cookies are dangerous!", "Devilled eggs were a hit at the party.", "Anyone else obsessed with Dozer?"] }, { id: "comm5", name: "Once Upon a Chef Classics", description: "Tested and perfected recipes for home cooks.", imageUrl: "https://placehold.co/600x150/f3e8ff/9333ea?text=Once+Upon+a+Chef+Community", sampleConversations: ["Making the minestrone soup today!", "The lemon poppy seed cake is divine.", "Perfect potato soup recipe."] }, { id: "comm6", name: "Downshiftology Wellness", description: "Healthy recipes and lifestyle tips.", imageUrl: "https://placehold.co/600x150/ecfdf5/10b981?text=Downshiftology+Community", sampleConversations: ["Love the salmon ideas!", "Great healthy Super Bowl snacks.", "What are your favorite meal prep tips?"] }, { id: "comm7", name: "Gimme Some Oven Gatherings", description: "Everyday recipes made easy and delicious.", imageUrl: "https://placehold.co/600x150/ffedd5/f97316?text=Gimme+Some+Oven+Community", sampleConversations: ["Shakshuka for brunch this weekend!", "The potsticker salad is genius.", "Tried the iced matcha latte - yum!"] }, { id: "comm8", name: "Half Baked Harvest Creations", description: "Cozy, indulgent recipes with a rustic touch.", imageUrl: "https://placehold.co/600x150/e0e7ff/4f46e5?text=Half+Baked+Harvest+Community", sampleConversations: ["Making the strawberry cobbler tonight!", "Those taquitos look amazing.", "Favorite HBH comfort food?"] }, { id: "comm9", name: "Cooking Classy Connoisseurs", description: "Elegant and approachable recipes for all occasions.", imageUrl: "https://placehold.co/600x150/fee2e2/dc2626?text=Cooking+Classy+Community", sampleConversations: ["The tiramisu cupcakes were incredible!", "Best cheesy garlic bread ever.", "Italian wedding soup is perfect for a chilly day."] }, { id: "comm10", name: "Mediterranean Dish Delights", description: "Fresh, flavorful recipes inspired by the Mediterranean.", imageUrl: "https://placehold.co/600x150/dbeafe/2563eb?text=Mediterranean+Dish+Community", sampleConversations: ["Air fryer shrimp is a game changer!", "Making Kumpir tonight!", "Love the Biftekia recipe."] }, { id: "comm11", name: "Skinnytaste Sensations", description: "Delicious, healthy, family-friendly recipes.", imageUrl: "https://placehold.co/600x150/ede9fe/7c3aed?text=Skinnytaste+Community", sampleConversations: ["The golden beet salad is so refreshing.", "Fruit pizza was a hit with the kids!", "Chickpea 'tuna' salad is surprisingly good!"] } ];
         const tomProfileData = { name: "Tom Critchlow", imageUrl: "https://placehold.co/128x128/e0e7ff/4f46e5?text=TC", bio: "Food enthusiast exploring the web's best recipes. Particularly interested in simple weeknight meals and classic comfort food. Always looking for the next great find!", joinedCommunityIds: ["comm1", "comm2", "comm3", "comm4", "comm5"] };
         const videoData = [ /* Truncated */ { id: "vid1", thumbnailUrl: "https://placehold.co/300x500/ef4444/ffffff?text=Video+1+Preview", videoUrl: "https://placehold.co/1080x1920/ef4444/ffffff?text=Vertical+Video+1", title: "Quick Pasta Hack", uploader: "Chef Quickie" }, { id: "vid2", thumbnailUrl: "https://placehold.co/300x500/f97316/ffffff?text=Video+2+Preview", videoUrl: "https://placehold.co/1080x1920/f97316/ffffff?text=Vertical+Video+2", title: "Amazing Cake Decorating", uploader: "SweetArt" }, { id: "vid3", thumbnailUrl: "https://placehold.co/300x500/eab308/ffffff?text=Video+3+Preview", videoUrl: "https://placehold.co/1080x1920/eab308/ffffff?text=Vertical+Video+3", title: "Spicy Noodle Challenge", uploader: "FoodAdventures" }, { id: "vid4", thumbnailUrl: "https://placehold.co/300x500/84cc16/ffffff?text=Video+4+Preview", videoUrl: "https://placehold.co/1080x1920/84cc16/ffffff?text=Vertical+Video+4", title: "Healthy Breakfast Bowl", uploader: "FitFoodie" }, { id: "vid5", thumbnailUrl: "https://placehold.co/300x500/22c55e/ffffff?text=Video+5+Preview", videoUrl: "https://placehold.co/1080x1920/22c55e/ffffff?text=Vertical+Video+5", title: "Gardening Tips for Herbs", uploader: "GreenThumb" }, { id: "vid6", thumbnailUrl: "https://placehold.co/300x500/14b8a6/ffffff?text=Video+6+Preview", videoUrl: "https://placehold.co/1080x1920/14b8a6/ffffff?text=Vertical+Video+6", title: "Perfect Coffee Pour", uploader: "BaristaLife" }, { id: "vid7", thumbnailUrl: "https://placehold.co/300x500/0ea5e9/ffffff?text=Video+7+Preview", videoUrl: "https://placehold.co/1080x1920/0ea5e9/ffffff?text=Vertical+Video+7", title: "Travel Eats: Italy", uploader: "WanderlustFood" }, { id: "vid8", thumbnailUrl: "https://placehold.co/300x500/6366f1/ffffff?text=Video+8+Preview", videoUrl: "https://placehold.co/1080x1920/6366f1/ffffff?text=Vertical+Video+8", title: "DIY Kitchen Gadgets", uploader: "MakerMan" }, { id: "vid9", thumbnailUrl: "https://placehold.co/300x500/a855f7/ffffff?text=Video+9+Preview", videoUrl: "https://placehold.co/1080x1920/a855f7/ffffff?text=Vertical+Video+9", title: "Cute Pet Moments", uploader: "AnimalAntics" }, { id: "vid10", thumbnailUrl: "https://placehold.co/300x500/ec4899/ffffff?text=Video+10+Preview", videoUrl: "https://placehold.co/1080x1920/ec4899/ffffff?text=Vertical+Video+10", title: "Makeup Tutorial", uploader: "GlamGuru" } ];
-        // --- AI Chat Dummy Data (Updated Flow) ---
+        // --- AI Chat Dummy Data (Updated Flow & Cards) ---
         const dummyChatMessages = [
             { sender: "ai", type: "text", text: "Hi Tom! What are you looking for?" },
             { sender: "user", type: "text", text: "Some quick kid friendly weeknight recipes" },
-            { sender: "ai", type: "text", text: "Here's a few options:" }, // Intro text
-            { // First option
-                sender: "ai",
-                type: "recipeCard",
-                recipe: { id: "108392", title: "Ground Beef Stir Fry (with Video)", imageUrl: "https://natashaskitchen.com/wp-content/uploads/2025/03/Ground-Beef-Strir-Fry-4.jpg", sourceUrl: "https://natashaskitchen.com/ground-beef-stir-fry/" }
-            },
-            { // Second option
-                sender: "ai",
-                type: "recipeCard",
-                recipe: { id: "21541", title: "Fruit Pizza", imageUrl: "https://www.skinnytaste.com/wp-content/uploads/2014/05/Fruit-Pizza-20.jpg", sourceUrl: "https://www.skinnytaste.com/fruit-pizza/" }
-            },
+            { sender: "ai", type: "text", text: "Here's a few options:" },
+            { sender: "ai", type: "recipeCard", recipe: { id: "108392", title: "Ground Beef Stir Fry (with Video)", imageUrl: "https://natashaskitchen.com/wp-content/uploads/2025/03/Ground-Beef-Strir-Fry-4.jpg", sourceUrl: "https://natashaskitchen.com/ground-beef-stir-fry/" } },
+            { sender: "ai", type: "recipeCard", recipe: { id: "21541", title: "Fruit Pizza", imageUrl: "https://www.skinnytaste.com/wp-content/uploads/2014/05/Fruit-Pizza-20.jpg", sourceUrl: "https://www.skinnytaste.com/fruit-pizza/" } },
+            { sender: "ai", type: "recipeCard", recipe: { id: "20052", title: "Cheesy Garlic Bread", imageUrl: "https://www.cookingclassy.com/wp-content/uploads/2015/07/cheesy-garlic-bread-1.jpg", sourceUrl: "https://www.cookingclassy.com/cheesy-garlic-bread/" } },
             { sender: "user", type: "text", text: "what about something veggie?" },
-            { sender: "ai", type: "text", text: "Got it, how about these veggie ideas:" }, // Intro text
-            { // First veggie option
-                sender: "ai",
-                type: "recipeCard",
-                recipe: { id: "88786", title: "Chili-Lime Roasted Cauliflower Quinoa Bowls", imageUrl: "https://www.gimmesomeoven.com/wp-content/uploads/2025/03/Cilantro-Lime-Cauliflower-Quinoa-Bowls-11.jpg", sourceUrl: "https://www.gimmesomeoven.com/chili-lime-roasted-cauliflower-quinoa-bowls/" }
-             },
-             { // Second veggie option
-                sender: "ai",
-                type: "recipeCard",
-                recipe: { id: "143295", title: "Golden Beet Salad", imageUrl: "https://www.skinnytaste.com/wp-content/uploads/2025/03/Golden-Beet-Salad-18.jpg", sourceUrl: "https://www.skinnytaste.com/golden-beet-salad/" }
-             },
-            { sender: "ai", type: "text", text: "Let me know if either of those look interesting!" },
+            { sender: "ai", type: "text", text: "Got it, how about these veggie ideas:" },
+            { sender: "ai", type: "recipeCard", recipe: { id: "88786", title: "Chili-Lime Roasted Cauliflower Quinoa Bowls", imageUrl: "https://www.gimmesomeoven.com/wp-content/uploads/2025/03/Cilantro-Lime-Cauliflower-Quinoa-Bowls-11.jpg", sourceUrl: "https://www.gimmesomeoven.com/chili-lime-roasted-cauliflower-quinoa-bowls/" } },
+            { sender: "ai", type: "recipeCard", recipe: { id: "143295", title: "Golden Beet Salad", imageUrl: "https://www.skinnytaste.com/wp-content/uploads/2025/03/Golden-Beet-Salad-18.jpg", sourceUrl: "https://www.skinnytaste.com/golden-beet-salad/" } },
+            { sender: "ai", type: "recipeCard", recipe: { id: "56962", title: "Roasted Asparagus", imageUrl: "https://www.loveandlemons.com/wp-content/uploads/2025/03/311_LLBlogJan_RoastedAsparagus_66081-social.jpg", sourceUrl: "https://www.loveandlemons.com/roasted-asparagus/" } },
+            { sender: "ai", type: "text", text: "Let me know if any of those look interesting!" },
             { sender: "ai", type: "text", text: "End of demo conversation." }
         ];
         // --- END OF DATA ---
@@ -259,7 +245,7 @@
         function closeAiChat() { /* ... (same as before) ... */
             aiChatModal.classList.add('hidden'); aiChatModal.classList.remove('flex'); document.body.style.overflow = '';
         }
-        // ** Updated addNextChatMessage with Recipe Card Logic **
+        // ** Updated addNextChatMessage with Recipe Card Row Logic **
         function addNextChatMessage() {
             if (!aiChatMessages || nextMessageIndex >= dummyChatMessages.length) {
                 if (nextMessageIndex === dummyChatMessages.length && aiChatMessages) {
@@ -268,46 +254,71 @@
             }
 
             const message = dummyChatMessages[nextMessageIndex];
-            const messageContainer = document.createElement('div');
-            messageContainer.classList.add('w-full', 'flex');
+            const prevMessage = dummyChatMessages[nextMessageIndex - 1];
+            const lastMessageBubble = aiChatMessages.lastElementChild;
 
-            if (message.sender === 'user') {
-                messageContainer.classList.add('justify-end');
-                const textBubble = document.createElement('div');
-                textBubble.classList.add('max-w-[80%]', 'p-3', 'rounded-lg', 'text-sm', 'bg-blue-500', 'text-white', 'rounded-br-none');
-                textBubble.textContent = message.text;
-                messageContainer.appendChild(textBubble);
-            } else { // AI sender
-                messageContainer.classList.add('justify-start');
-                const aiBubbleContainer = document.createElement('div');
-                aiBubbleContainer.classList.add('max-w-[80%]', 'p-3', 'rounded-lg', 'text-sm', 'bg-gray-200', 'dark:bg-gray-700', 'text-gray-800', 'dark:text-gray-100', 'rounded-bl-none');
+            const shouldGroupWithPrevious =
+                message.sender === 'ai' && message.type === 'recipeCard' &&
+                prevMessage && prevMessage.sender === 'ai' && prevMessage.type === 'recipeCard' &&
+                lastMessageBubble?.classList.contains('ai-bubble');
 
-                if (message.text) {
-                    const introText = document.createElement('p');
-                    introText.textContent = message.text;
-                    if (message.type === 'recipeCard' && message.recipe) { introText.classList.add('mb-2'); }
-                    aiBubbleContainer.appendChild(introText);
-                }
+            let aiBubbleContainer;
+            let recipeRowContainer;
 
-                if (message.type === 'recipeCard' && message.recipe) {
-                    const recipe = message.recipe;
-                    const cardHTML = `
-                        <div class="recipe-card bg-white dark:bg-gray-600 rounded-md overflow-hidden shadow mt-1 border border-gray-300 dark:border-gray-500 max-w-xs">
-                            <img src="${recipe.imageUrl}" alt="${recipe.title}" class="w-full h-24 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/300x150/cccccc/999999?text=No+Image';">
-                            <div class="p-2">
-                                <h5 class="font-semibold text-xs mb-1 truncate text-gray-900 dark:text-gray-50">${recipe.title}</h5>
-                                <a href="${recipe.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-xs bg-red-500 hover:bg-red-600 text-white px-2 py-1 rounded-full font-medium w-full transition-colors">
-                                    View Recipe
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link ml-1"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
-                                </a>
-                            </div>
-                        </div>`;
-                    aiBubbleContainer.insertAdjacentHTML('beforeend', cardHTML);
-                }
-                 messageContainer.appendChild(aiBubbleContainer);
+            if (shouldGroupWithPrevious) {
+                aiBubbleContainer = lastMessageBubble.querySelector('.ai-bubble-content');
+                recipeRowContainer = aiBubbleContainer?.querySelector('.recipe-card-row');
             }
 
-            aiChatMessages.appendChild(messageContainer);
+            if (!shouldGroupWithPrevious || !recipeRowContainer) {
+                const messageContainer = document.createElement('div');
+                messageContainer.classList.add('w-full', 'flex');
+
+                if (message.sender === 'user') {
+                    messageContainer.classList.add('justify-end');
+                    const textBubble = document.createElement('div');
+                    textBubble.classList.add('max-w-[80%]', 'p-3', 'rounded-lg', 'text-sm', 'bg-blue-500', 'text-white', 'rounded-br-none');
+                    textBubble.textContent = message.text;
+                    messageContainer.appendChild(textBubble);
+                } else { // AI sender (start new bubble)
+                    messageContainer.classList.add('justify-start', 'ai-bubble');
+                    aiBubbleContainer = document.createElement('div');
+                    aiBubbleContainer.classList.add('ai-bubble-content', 'max-w-[80%]', 'p-3', 'rounded-lg', 'text-sm', 'bg-gray-200', 'dark:bg-gray-700', 'text-gray-800', 'dark:text-gray-100', 'rounded-bl-none');
+
+                    if (message.text) {
+                        const introText = document.createElement('p');
+                        introText.textContent = message.text;
+                        if (message.type === 'recipeCard') introText.classList.add('mb-2');
+                        aiBubbleContainer.appendChild(introText);
+                    }
+
+                    if (message.type === 'recipeCard') {
+                        recipeRowContainer = document.createElement('div');
+                        recipeRowContainer.classList.add('recipe-card-row', 'flex', 'flex-wrap', 'gap-2', 'mt-1');
+                        aiBubbleContainer.appendChild(recipeRowContainer);
+                    }
+                    messageContainer.appendChild(aiBubbleContainer);
+                }
+                aiChatMessages.appendChild(messageContainer);
+            }
+
+            if (message.type === 'recipeCard' && message.recipe && recipeRowContainer) {
+                const recipe = message.recipe;
+                // Removed incorrect comments from this template literal
+                const cardHTML = `
+                    <div class="recipe-card bg-white dark:bg-gray-600 rounded-md overflow-hidden shadow border border-gray-300 dark:border-gray-500 w-36 flex-shrink-0">
+                        <img src="${recipe.imageUrl}" alt="${recipe.title}" class="w-full h-20 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x100/cccccc/999999?text=No+Image';">
+                        <div class="p-1.5">
+                            <h5 class="font-semibold text-[11px] mb-1 truncate text-gray-900 dark:text-gray-50">${recipe.title}</h5>
+                            <a href="${recipe.sourceUrl}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center text-[10px] bg-red-500 hover:bg-red-600 text-white px-2 py-0.5 rounded-full font-medium w-full transition-colors">
+                                View Recipe
+                                <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-external-link ml-1"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" x2="21" y1="14" y2="3"/></svg>
+                            </a>
+                        </div>
+                    </div>`;
+                recipeRowContainer.insertAdjacentHTML('beforeend', cardHTML);
+            }
+
             aiChatMessages.scrollTop = aiChatMessages.scrollHeight;
             nextMessageIndex++;
         }
@@ -356,12 +367,18 @@
              // AI Chat Listeners
              if(aiChatButton) aiChatButton.addEventListener('click', openAiChat);
              if(closeAiChatButton) closeAiChatButton.addEventListener('click', closeAiChat);
-             if(aiChatMessages) { // ** Attach listener ONLY to message area for adding messages **
-                 aiChatMessages.addEventListener('click', (event) => {
-                    // Only trigger if the click is directly on the message area background
-                    if (event.target === aiChatMessages) {
-                       addNextChatMessage();
+             // ** Updated AI Chat Tap Listener **
+             if(aiChatModal) {
+                 aiChatModal.addEventListener('click', (event) => {
+                    // Prevent advancing chat if clicking interactive elements like buttons or links
+                    if (event.target.closest('button') || event.target.closest('a')) {
+                        // Allow close button to function
+                        if (event.target.closest('#closeAiChatButton')) { return; }
+                        // Prevent advancing if clicking other buttons/links (like recipe card links)
+                        return;
                     }
+                    // If click is not on an interactive element, advance chat
+                    addNextChatMessage();
                  });
              }
              // Modal Save Button Listener
