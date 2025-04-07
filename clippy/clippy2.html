@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script type="text/javascript" async defer src="https://cdn.storifyme.xyz/static/web-components/storifyme-elements.min.js"></script>
     <style>
       /* Lucide font setup */
       @font-face {
@@ -28,13 +29,17 @@
 
       /* Reset columns for other views */
       #pin-container.view-community,
-      #pin-container.view-profile,
-      #pin-container.view-videos { columns: 1; }
+      #pin-container.view-profile { columns: 1; }
+      /* Keep video grid */
+      #pin-container.view-videos { columns: 1; /* Let the grid handle columns */ }
+
 
       /* Prevent items breaking in column view */
-      .pin, .community-card, .profile-section, .video-card { break-inside: avoid-column; margin-bottom: 1rem; display: block; width: 100%; }
+      .pin, .community-card, .profile-section { break-inside: avoid-column; margin-bottom: 1rem; display: block; width: 100%; }
       .community-card { margin-bottom: 1.5rem; }
       .pin { display: inline-block; }
+      /* Video cards don't need break-inside in grid */
+      .video-card { margin-bottom: 1rem; display: block; width: 100%; }
 
 
       /* Modal scrollbar */
@@ -111,27 +116,12 @@
 
 
     <script>
-        // --- DATA ---
-        const pinData =[ /* Truncated */ { "id": "18397", "imageUrl": "https://natashaskitchen.com/wp-content/uploads/2025/02/How-to-dye-Easter-Eggs-With-Onion-Skins-7.jpg", "altText": "How to Dye Easter Eggs with Onion Skins", "sourceUrl": "https://natashaskitchen.com/natural-easter-eggs-3-ways/", "sourceText": "Natasha's Kitchen" }, { "id": "108392", "imageUrl": "https://natashaskitchen.com/wp-content/uploads/2025/03/Ground-Beef-Strir-Fry-4.jpg", "altText": "Ground Beef Stir Fry (with Video)", "sourceUrl": "https://natashaskitchen.com/ground-beef-stir-fry/", "sourceText": "Natasha's Kitchen" }, { "id": "336412", "imageUrl": "https://www.spendwithpennies.com/wp-content/uploads/2025/03/Chicken-Scallopini-SpendWithPennies-8.jpg", "altText": "Chicken Scallopini", "sourceUrl": "https://www.spendwithpennies.com/chicken-scallopini/", "sourceText": "Spend With Pennies" }, { "id": "145936", "imageUrl": "https://www.spendwithpennies.com/wp-content/uploads/2025/03/Parmesan-Roasted-Leeks-2-SpendWithPennies-21.jpg", "altText": "Roasted Leeks", "sourceUrl": "https://www.spendwithpennies.com/parmesan-roasted-leeks/", "sourceText": "Spend With Pennies" }, { "id": "35959", "imageUrl": "https://www.loveandlemons.com/wp-content/uploads/2025/03/carrot-cake-social.jpg", "altText": "Easy Carrot Cake", "sourceUrl": "https://www.loveandlemons.com/carrot-cake-recipe/", "sourceText": "Love & Lemons" }, { "id": "56962", "imageUrl": "https://www.loveandlemons.com/wp-content/uploads/2025/03/311_LLBlogJan_RoastedAsparagus_66081-social.jpg", "altText": "Roasted Asparagus", "sourceUrl": "https://www.loveandlemons.com/roasted-asparagus/", "sourceText": "Love & Lemons" }, { "id": "169075", "imageUrl": "https://www.recipetineats.com/tachyon/2025/03/The-Chocolate-Chip-Cookie-of-my-dreams-_2.jpg", "altText": "The Chocolate Chip Cookies of my dreams", "sourceUrl": "https://www.recipetineats.com/the-chocolate-chip-cookies-of-my-dreams/", "sourceText": "RecipeTin Eats" }, { "id": "168886", "imageUrl": "https://www.recipetineats.com/tachyon/2025/02/Devilled-eggs_8.jpg", "altText": "Devilled eggs", "sourceUrl": "https://www.recipetineats.com/devilled-eggs/", "sourceText": "RecipeTin Eats" }, { "id": "62235", "imageUrl": "https://www.onceuponachef.com/images/2025/01/Charoset-Hero-4.jpg", "altText": "Charoset (A Sweet Apple and Nut Mixture for Passover)", "sourceUrl": "https://www.onceuponachef.com/recipes/charoset-a-sweet-apple-and-nut-mixture-for-passover.html", "sourceText": "Once Upon a Chef" }, { "id": "63015", "imageUrl": "https://www.onceuponachef.com/images/2025/03/Minestrone-Soup-16-1200x1800.jpg", "altText": "Minestrone Soup", "sourceUrl": "https://www.onceuponachef.com/recipes/minestrone-soup.html", "sourceText": "Once Upon a Chef" }, { "id": "59554", "imageUrl": "https://downshiftology.com/wp-content/uploads/2022/03/St.-Patricks-Day-Recipes-1.jpg", "altText": "Best St. Patrick's Day Food Ideas", "sourceUrl": "https://downshiftology.com/best-st-patricks-day-recipes/", "sourceText": "Downshiftology" }, { "id": "49801", "imageUrl": "https://downshiftology.com/wp-content/uploads/2021/02/Best-Salmon-Recipes-5.jpg", "altText": "20+ Best Salmon Recipes", "sourceUrl": "https://downshiftology.com/best-easy-salmon-recipes/", "sourceText": "Downshiftology" }, { "id": "88786", "imageUrl": "https://www.gimmesomeoven.com/wp-content/uploads/2025/03/Cilantro-Lime-Cauliflower-Quinoa-Bowls-11.jpg", "altText": "Chili-Lime Roasted Cauliflower Quinoa Bowls", "sourceUrl": "https://www.gimmesomeoven.com/chili-lime-roasted-cauliflower-quinoa-bowls/", "sourceText": "Gimme Some Oven" }, { "id": "88828", "imageUrl": "https://www.gimmesomeoven.com/wp-content/uploads/2025/03/Shakshuka-7.jpg", "altText": "Shakshuka", "sourceUrl": "https://www.gimmesomeoven.com/shakshuka-recipe/", "sourceText": "Gimme Some Oven" }, { "id": "179121", "imageUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2025/04/Strawberry-Oatmeal-Cookie-Cobbler-1-scaled.jpg", "altText": "Strawberry Oatmeal Cookie Cobbler.", "sourceUrl": "https://www.halfbakedharvest.com/strawberry-oatmeal-cookie-cobbler/", "sourceText": "Half Baked Harvest" }, { "id": "179097", "imageUrl": "https://www.halfbakedharvest.com/wp-content/uploads/2025/03/Baked-Cheesy-Cuban-Chicken-Taquitos-1-scaled.jpg", "altText": "Baked Cheesy Cuban Chicken Taquitos.", "sourceUrl": "https://www.halfbakedharvest.com/cuban-chicken-taquitos/", "sourceText": "Half Baked Harvest" }, { "id": "74236", "imageUrl": "https://www.cookingclassy.com/wp-content/uploads/2024/11/tiramisu-cupcakes-7.jpg", "altText": "Tiramisu Cupcakes", "sourceUrl": "https://www.cookingclassy.com/tiramisu-cupcakes/", "sourceText": "Cooking Classy" }, { "id": "20052", "imageUrl": "https://www.cookingclassy.com/wp-content/uploads/2015/07/cheesy-garlic-bread-1.jpg", "altText": "Cheesy Garlic Bread", "sourceUrl": "https://www.cookingclassy.com/cheesy-garlic-bread/", "sourceText": "Cooking Classy" }, { "id": "107157", "imageUrl": "https://www.themediterraneandish.com/wp-content/uploads/2025/03/TMD-Baghali-Polo-Leads-05.jpg", "altText": "Baghali Polo (Persian Dill and Fava Bean Rice)", "sourceUrl": "https://www.themediterraneandish.com/baghali-polo-persian-dill-rice-with-fava-beans/", "sourceText": "The Mediterranean Dish" }, { "id": "106688", "imageUrl": "https://www.themediterraneandish.com/wp-content/uploads/2025/03/AirFryerShrimp-15.jpg", "altText": "Air Fryer Shrimp", "sourceUrl": "https://www.themediterraneandish.com/air-fryer-shrimp/", "sourceText": "The Mediterranean Dish" }, { "id": "143295", "imageUrl": "https://www.skinnytaste.com/wp-content/uploads/2025/03/Golden-Beet-Salad-18.jpg", "altText": "Golden Beet Salad", "sourceUrl": "https://www.skinnytaste.com/golden-beet-salad/", "sourceText": "Skinnytaste" }, { "id": "21541", "imageUrl": "https://www.skinnytaste.com/wp-content/uploads/2014/05/Fruit-Pizza-20.jpg", "altText": "Fruit Pizza", "sourceUrl": "https://www.skinnytaste.com/fruit-pizza/", "sourceText": "Skinnytaste" } ];
-        const communityData = [ /* Truncated */ { id: "comm1", name: "Natasha's Kitchen Fans", description: "Sharing classic recipes and kitchen tips.", imageUrl: "https://placehold.co/600x150/e0f2fe/0ea5e9?text=Natasha's+Kitchen+Community", sampleConversations: ["Anyone tried the beef stroganoff? Amazing!", "My family loved the chocolate cake!", "Tips for getting kids to eat veggies?"] }, { id: "comm2", name: "Spend With Pennies Savers", description: "Budget-friendly meals and smart shopping.", imageUrl: "https://placehold.co/600x150/dcfce7/16a34a?text=Spend+With+Pennies+Community", sampleConversations: ["Best casserole for leftovers?", "Made the chicken scallopini - so easy!", "Where do you find the best deals on groceries?"] }, { id: "comm3", name: "Love & Lemons Fresh Finds", description: "Celebrating seasonal ingredients and vibrant food.", imageUrl: "https://placehold.co/600x150/fef9c3/ca8a04?text=Love+&+Lemons+Community", sampleConversations: ["The roasted asparagus is my go-to side.", "What's everyone making with spring produce?", "Carrot cake success! Thanks for the recipe."] }, { id: "comm4", name: "RecipeTin Eats Enthusiasts", description: "Bold flavours and foolproof recipes from Nagi.", imageUrl: "https://placehold.co/600x150/fce7f3/db2777?text=RecipeTin+Eats+Community", sampleConversations: ["Those chocolate chip cookies are dangerous!", "Devilled eggs were a hit at the party.", "Anyone else obsessed with Dozer?"] }, { id: "comm5", name: "Once Upon a Chef Classics", description: "Tested and perfected recipes for home cooks.", imageUrl: "https://placehold.co/600x150/f3e8ff/9333ea?text=Once+Upon+a+Chef+Community", sampleConversations: ["Making the minestrone soup today!", "The lemon poppy seed cake is divine.", "Perfect potato soup recipe."] }, { id: "comm6", name: "Downshiftology Wellness", description: "Healthy recipes and lifestyle tips.", imageUrl: "https://placehold.co/600x150/ecfdf5/10b981?text=Downshiftology+Community", sampleConversations: ["Love the salmon ideas!", "Great healthy Super Bowl snacks.", "What are your favorite meal prep tips?"] }, { id: "comm7", name: "Gimme Some Oven Gatherings", description: "Everyday recipes made easy and delicious.", imageUrl: "https://placehold.co/600x150/ffedd5/f97316?text=Gimme+Some+Oven+Community", sampleConversations: ["Shakshuka for brunch this weekend!", "The potsticker salad is genius.", "Tried the iced matcha latte - yum!"] }, { id: "comm8", name: "Half Baked Harvest Creations", description: "Cozy, indulgent recipes with a rustic touch.", imageUrl: "https://placehold.co/600x150/e0e7ff/4f46e5?text=Half+Baked+Harvest+Community", sampleConversations: ["Making the strawberry cobbler tonight!", "Those taquitos look amazing.", "Favorite HBH comfort food?"] }, { id: "comm9", name: "Cooking Classy Connoisseurs", description: "Elegant and approachable recipes for all occasions.", imageUrl: "https://placehold.co/600x150/fee2e2/dc2626?text=Cooking+Classy+Community", sampleConversations: ["The tiramisu cupcakes were incredible!", "Best cheesy garlic bread ever.", "Italian wedding soup is perfect for a chilly day."] }, { id: "comm10", name: "Mediterranean Dish Delights", description: "Fresh, flavorful recipes inspired by the Mediterranean.", imageUrl: "https://placehold.co/600x150/dbeafe/2563eb?text=Mediterranean+Dish+Community", sampleConversations: ["Air fryer shrimp is a game changer!", "Making Kumpir tonight!", "Love the Biftekia recipe."] }, { id: "comm11", name: "Skinnytaste Sensations", description: "Delicious, healthy, family-friendly recipes.", imageUrl: "https://placehold.co/600x150/ede9fe/7c3aed?text=Skinnytaste+Community", sampleConversations: ["The golden beet salad is so refreshing.", "Fruit pizza was a hit with the kids!", "Chickpea 'tuna' salad is surprisingly good!"] } ];
+        // --- DATA (Truncated for brevity - use your full data) ---
+        const pinData = [ /* Your full pinData array */ { "id": "18397", "imageUrl": "https://natashaskitchen.com/wp-content/uploads/2025/02/How-to-dye-Easter-Eggs-With-Onion-Skins-7.jpg", "altText": "How to Dye Easter Eggs with Onion Skins", "sourceUrl": "https://natashaskitchen.com/natural-easter-eggs-3-ways/", "sourceText": "Natasha's Kitchen" }, { "id": "108392", "imageUrl": "https://natashaskitchen.com/wp-content/uploads/2025/03/Ground-Beef-Strir-Fry-4.jpg", "altText": "Ground Beef Stir Fry (with Video)", "sourceUrl": "https://natashaskitchen.com/ground-beef-stir-fry/", "sourceText": "Natasha's Kitchen" } /* ... more pins */ ];
+        const communityData = [ /* Your full communityData array */ { id: "comm1", name: "Natasha's Kitchen Fans", description: "Sharing classic recipes and kitchen tips.", imageUrl: "https://placehold.co/600x150/e0f2fe/0ea5e9?text=Natasha's+Kitchen+Community", sampleConversations: ["Anyone tried the beef stroganoff? Amazing!", "My family loved the chocolate cake!", "Tips for getting kids to eat veggies?"] } /* ... more communities */];
         const tomProfileData = { name: "Tom Critchlow", imageUrl: "https://placehold.co/128x128/e0e7ff/4f46e5?text=TC", bio: "Food enthusiast exploring the web's best recipes. Particularly interested in simple weeknight meals and classic comfort food. Always looking for the next great find!", joinedCommunityIds: ["comm1", "comm2", "comm3", "comm4", "comm5"] };
-        const videoData = [ /* Truncated */ { id: "vid1", thumbnailUrl: "https://placehold.co/300x500/ef4444/ffffff?text=Video+1+Preview", videoUrl: "https://placehold.co/1080x1920/ef4444/ffffff?text=Vertical+Video+1", title: "Quick Pasta Hack", uploader: "Chef Quickie" }, { id: "vid2", thumbnailUrl: "https://placehold.co/300x500/f97316/ffffff?text=Video+2+Preview", videoUrl: "https://placehold.co/1080x1920/f97316/ffffff?text=Vertical+Video+2", title: "Amazing Cake Decorating", uploader: "SweetArt" }, { id: "vid3", thumbnailUrl: "https://placehold.co/300x500/eab308/ffffff?text=Video+3+Preview", videoUrl: "https://placehold.co/1080x1920/eab308/ffffff?text=Vertical+Video+3", title: "Spicy Noodle Challenge", uploader: "FoodAdventures" }, { id: "vid4", thumbnailUrl: "https://placehold.co/300x500/84cc16/ffffff?text=Video+4+Preview", videoUrl: "https://placehold.co/1080x1920/84cc16/ffffff?text=Vertical+Video+4", title: "Healthy Breakfast Bowl", uploader: "FitFoodie" }, { id: "vid5", thumbnailUrl: "https://placehold.co/300x500/22c55e/ffffff?text=Video+5+Preview", videoUrl: "https://placehold.co/1080x1920/22c55e/ffffff?text=Vertical+Video+5", title: "Gardening Tips for Herbs", uploader: "GreenThumb" }, { id: "vid6", thumbnailUrl: "https://placehold.co/300x500/14b8a6/ffffff?text=Video+6+Preview", videoUrl: "https://placehold.co/1080x1920/14b8a6/ffffff?text=Vertical+Video+6", title: "Perfect Coffee Pour", uploader: "BaristaLife" }, { id: "vid7", thumbnailUrl: "https://placehold.co/300x500/0ea5e9/ffffff?text=Video+7+Preview", videoUrl: "https://placehold.co/1080x1920/0ea5e9/ffffff?text=Vertical+Video+7", title: "Travel Eats: Italy", uploader: "WanderlustFood" }, { id: "vid8", thumbnailUrl: "https://placehold.co/300x500/6366f1/ffffff?text=Video+8+Preview", videoUrl: "https://placehold.co/1080x1920/6366f1/ffffff?text=Vertical+Video+8", title: "DIY Kitchen Gadgets", uploader: "MakerMan" }, { id: "vid9", thumbnailUrl: "https://placehold.co/300x500/a855f7/ffffff?text=Video+9+Preview", videoUrl: "https://placehold.co/1080x1920/a855f7/ffffff?text=Vertical+Video+9", title: "Cute Pet Moments", uploader: "AnimalAntics" }, { id: "vid10", thumbnailUrl: "https://placehold.co/300x500/ec4899/ffffff?text=Video+10+Preview", videoUrl: "https://placehold.co/1080x1920/ec4899/ffffff?text=Vertical+Video+10", title: "Makeup Tutorial", uploader: "GlamGuru" } ];
-        // --- AI Chat Dummy Data (Updated Flow & Cards) ---
-        const dummyChatMessages = [
-            { sender: "ai", type: "text", text: "Hi Tom! What are you looking for?" },
-            { sender: "user", type: "text", text: "Some quick kid friendly weeknight recipes" },
-            { sender: "ai", type: "text", text: "Here's a few options:" },
-            { sender: "ai", type: "recipeCard", recipe: { id: "108392", title: "Ground Beef Stir Fry (with Video)", imageUrl: "https://natashaskitchen.com/wp-content/uploads/2025/03/Ground-Beef-Strir-Fry-4.jpg", sourceUrl: "https://natashaskitchen.com/ground-beef-stir-fry/" } },
-            { sender: "ai", type: "recipeCard", recipe: { id: "21541", title: "Fruit Pizza", imageUrl: "https://www.skinnytaste.com/wp-content/uploads/2014/05/Fruit-Pizza-20.jpg", sourceUrl: "https://www.skinnytaste.com/fruit-pizza/" } },
-            { sender: "ai", type: "recipeCard", recipe: { id: "20052", title: "Cheesy Garlic Bread", imageUrl: "https://www.cookingclassy.com/wp-content/uploads/2015/07/cheesy-garlic-bread-1.jpg", sourceUrl: "https://www.cookingclassy.com/cheesy-garlic-bread/" } },
-            { sender: "user", type: "text", text: "what about something veggie?" },
-            { sender: "ai", type: "text", text: "Got it, how about these veggie ideas:" },
-            { sender: "ai", type: "recipeCard", recipe: { id: "88786", title: "Chili-Lime Roasted Cauliflower Quinoa Bowls", imageUrl: "https://www.gimmesomeoven.com/wp-content/uploads/2025/03/Cilantro-Lime-Cauliflower-Quinoa-Bowls-11.jpg", sourceUrl: "https://www.gimmesomeoven.com/chili-lime-roasted-cauliflower-quinoa-bowls/" } },
-            { sender: "ai", type: "recipeCard", recipe: { id: "143295", title: "Golden Beet Salad", imageUrl: "https://www.skinnytaste.com/wp-content/uploads/2025/03/Golden-Beet-Salad-18.jpg", sourceUrl: "https://www.skinnytaste.com/golden-beet-salad/" } },
-            { sender: "ai", type: "recipeCard", recipe: { id: "56962", title: "Roasted Asparagus", imageUrl: "https://www.loveandlemons.com/wp-content/uploads/2025/03/311_LLBlogJan_RoastedAsparagus_66081-social.jpg", sourceUrl: "https://www.loveandlemons.com/roasted-asparagus/" } },
-            { sender: "ai", type: "text", text: "Let me know if any of those look interesting!" },
-            { sender: "ai", type: "text", text: "End of demo conversation." }
-        ];
+        const videoData = [ /* Your full videoData array */ { id: "vid1", thumbnailUrl: "https://placehold.co/300x500/ef4444/ffffff?text=Video+1+Preview", videoUrl: "https://placehold.co/1080x1920/ef4444/ffffff?text=Vertical+Video+1", title: "Quick Pasta Hack", uploader: "Chef Quickie" }, { id: "vid2", thumbnailUrl: "https://placehold.co/300x500/f97316/ffffff?text=Video+2+Preview", videoUrl: "https://placehold.co/1080x1920/f97316/ffffff?text=Vertical+Video+2", title: "Amazing Cake Decorating", uploader: "SweetArt" } /* ... more videos */];
+        const dummyChatMessages = [ /* Your full dummyChatMessages array */ { sender: "ai", type: "text", text: "Hi Tom! What are you looking for?" } /* ... more messages */ ];
         // --- END OF DATA ---
 
 
@@ -172,38 +162,78 @@
 
         // --- Rendering Functions ---
         function getDomainFromUrl(url) { if (!url) return null; try { const u = new URL(url); return u.hostname.replace(/^www\./, ''); } catch (e) { return null; } }
-        function createPinElementHTML(pin) { /* ... (same as before) ... */
+
+        function createPinElementHTML(pin) {
             const domainName = getDomainFromUrl(pin.sourceUrl); const saved = isPinSaved(pin.id); const buttonClass = saved ? 'saved' : ''; const buttonText = saved ? 'Saved' : 'Save';
             return `<div class="pin group relative cursor-pointer bg-gray-200 rounded-lg overflow-hidden" data-id="${pin.id}"><img src="${pin.imageUrl}" alt="${pin.altText || 'Pin image'}" class="w-full h-auto block" onerror="this.onerror=null; this.src='https://placehold.co/400x300/fecaca/991b1b?text=Image+Error';" loading="lazy" /><div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-between p-3"><button class="save-button self-end bg-red-600 hover:bg-red-700 text-white px-4 py-1.5 rounded-full text-sm font-semibold transition-colors ${buttonClass}">${buttonText}</button>${domainName ? `<a href="${pin.sourceUrl || '#'}" target="_blank" rel="noopener noreferrer" class="source-link mt-auto bg-white bg-opacity-80 hover:bg-opacity-100 text-black px-3 py-1 rounded-full text-xs font-medium truncate transition-colors self-start">${domainName}</a>` : ''}</div></div>`;
         }
-        function renderPins(pinsToRender, containerClass = 'view-pins') { /* ... (same as before) ... */
-            if (!pinContainer) return; pinContainer.className = `pin-container ${containerClass}`; pinContainer.innerHTML = '';
+
+        function renderPins(pinsToRender, containerClass = 'view-pins') {
+            if (!pinContainer) return;
+            pinContainer.className = `pin-container ${containerClass}`; pinContainer.innerHTML = '';
             if (!pinsToRender || pinsToRender.length === 0) { pinContainer.innerHTML = '<p class="text-gray-500 text-center col-span-full py-10">No recipes found.</p>'; return; }
             pinsToRender.forEach(pin => { pinContainer.insertAdjacentHTML('beforeend', createPinElementHTML(pin)); }); attachPinListeners();
         }
-        function createCommunityCardHTML(community) { /* ... (same as before) ... */
+
+        function createCommunityCardHTML(community) {
              const conversationItemsHTML = community.sampleConversations.map(convo => `<li class="text-xs text-gray-600 truncate italic">"${convo}"</li>`).join('');
              return `<div class="community-card bg-white rounded-lg shadow-md overflow-hidden border border-gray-200" data-id="${community.id}"><img src="${community.imageUrl}" alt="${community.name} banner" class="w-full h-24 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/600x150/cccccc/999999?text=Community+Image';"><div class="p-4"><div class="flex justify-between items-start mb-2"><div><h3 class="font-bold text-lg text-gray-800">${community.name}</h3><p class="text-sm text-gray-500">${community.description}</p></div><button class="join-button bg-blue-500 hover:bg-blue-600 text-white px-4 py-1.5 rounded-full text-sm font-semibold transition-colors flex-shrink-0 ml-4">Join</button></div><div class="mt-3 border-t pt-3"><h4 class="text-xs font-semibold text-gray-700 mb-1 uppercase">Recent Chatter:</h4><ul class="space-y-1">${conversationItemsHTML}</ul></div></div></div>`;
         }
-        function renderCommunities(communitiesToRender) { /* ... (same as before) ... */
-             if (!pinContainer) return; pinContainer.className = 'pin-container view-community space-y-6'; pinContainer.innerHTML = '';
+
+        function renderCommunities(communitiesToRender) {
+             if (!pinContainer) return;
+             pinContainer.className = 'pin-container view-community space-y-6'; pinContainer.innerHTML = '';
              if (!communitiesToRender || communitiesToRender.length === 0) { pinContainer.innerHTML = '<p class="text-gray-500 text-center col-span-full py-10">No communities found.</p>'; return; }
              communitiesToRender.forEach(community => { pinContainer.insertAdjacentHTML('beforeend', createCommunityCardHTML(community)); });
+             // Add community specific listeners if needed (e.g., join button)
         }
-        function renderProfilePage(profile, allCommunities, savedRecipePins) { /* ... (same as before) ... */
-            if (!pinContainer) return; pinContainer.className = 'pin-container view-profile'; pinContainer.innerHTML = '';
+
+        function renderProfilePage(profile, allCommunities, savedRecipePins) {
+            if (!pinContainer) return;
+            pinContainer.className = 'pin-container view-profile'; pinContainer.innerHTML = '';
+            // Profile Header
             const profileHeaderHTML = `<div class="profile-section text-center mb-8 p-6 bg-white rounded-lg shadow"><img src="${profile.imageUrl}" alt="${profile.name}" class="w-24 h-24 md:w-32 md:h-32 rounded-full mx-auto mb-4 border-4 border-gray-200 shadow-sm" onerror="this.onerror=null; this.src='https://placehold.co/128x128/cccccc/999999?text=??';"><h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-2">${profile.name}</h2><p class="text-gray-600 max-w-xl mx-auto">${profile.bio}</p></div>`; pinContainer.insertAdjacentHTML('beforeend', profileHeaderHTML);
+            // Joined Communities
             const joinedCommunities = allCommunities.filter(comm => profile.joinedCommunityIds.includes(comm.id)); let communityBadgesHTML = '<div class="profile-section mb-8"><h3 class="text-xl font-semibold text-gray-700 mb-3 px-1">Joined Communities</h3><div class="flex flex-wrap gap-2">'; if (joinedCommunities.length > 0) { joinedCommunities.forEach(comm => { communityBadgesHTML += `<span class="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">${comm.name}</span>`; }); } else { communityBadgesHTML += '<p class="text-gray-500">Not part of any communities yet.</p>'; } communityBadgesHTML += '</div></div>'; pinContainer.insertAdjacentHTML('beforeend', communityBadgesHTML);
+            // Saved Recipes Grid
             let savedRecipesHTML = '<div class="profile-section mb-8"><h3 class="text-xl font-semibold text-gray-700 mb-4 px-1">Saved Recipes</h3>'; if (!savedRecipePins || savedRecipePins.length === 0) { savedRecipesHTML += '<p class="text-gray-500">No recipes saved yet.</p></div>'; pinContainer.insertAdjacentHTML('beforeend', savedRecipesHTML); } else { savedRecipesHTML += '<div id="profile-saved-pins-grid" class="grid grid-cols-2 md:grid-cols-3 gap-4">'; savedRecipesHTML += '</div></div>'; pinContainer.insertAdjacentHTML('beforeend', savedRecipesHTML); const savedPinsGrid = document.getElementById('profile-saved-pins-grid'); if (savedPinsGrid) { savedRecipePins.forEach(pin => { savedPinsGrid.insertAdjacentHTML('beforeend', createPinElementHTML(pin)); }); attachProfilePinListeners(savedPinsGrid); } }
         }
-        function createVideoCardHTML(video) { /* ... (same as before) ... */
+
+        function createVideoCardHTML(video) {
             return `<div class="video-card group relative cursor-pointer bg-gray-800 rounded-lg overflow-hidden shadow-lg" data-video-id="${video.id}"><img src="${video.thumbnailUrl}" alt="${video.title || 'Video preview'}" class="w-full h-auto block aspect-[9/16] object-cover" onerror="this.onerror=null; this.src='https://placehold.co/300x500/cccccc/999999?text=Video+Error';" loading="lazy" /><div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-100 group-hover:opacity-100 transition-opacity duration-300 ease-in-out flex flex-col justify-end p-3"><h4 class="text-white font-semibold text-sm truncate">${video.title}</h4><p class="text-white text-xs opacity-80 truncate">By ${video.uploader}</p></div><div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-play-circle opacity-70"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div></div>`;
         }
-        function renderVideos(videosToRender) { /* ... (same as before) ... */
-             if (!pinContainer) return; pinContainer.className = 'pin-container view-videos grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4'; pinContainer.innerHTML = '';
-             if (!videosToRender || videosToRender.length === 0) { pinContainer.innerHTML = '<p class="text-gray-500 text-center col-span-full py-10">No videos found.</p>'; return; }
-             videosToRender.forEach(video => { pinContainer.insertAdjacentHTML('beforeend', createVideoCardHTML(video)); }); attachVideoCardListeners();
+
+        // --- MODIFIED renderVideos FUNCTION ---
+        function renderVideos(videosToRender) {
+             const storifyMeHTML = '<storifyme-collection account="raptive-2947133" widget="8769" env="eu" style="display: block; margin-bottom: 1rem;"></storifyme-collection>';
+
+             if (!pinContainer) return;
+             // Set class for grid layout first
+             pinContainer.className = 'pin-container view-videos grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4';
+             // Clear existing content
+             pinContainer.innerHTML = '';
+
+             // --- Add StorifyMe Snippet ---
+             pinContainer.insertAdjacentHTML('afterbegin', storifyMeHTML);
+
+             // Now add video content (or message) below the StorifyMe element
+             const videoGridContainer = document.createElement('div');
+             // Apply grid styles to this inner container if needed, or rely on parent's grid
+             // Note: Since the parent (#pin-container) is already a grid, we might not need this inner div,
+             //       but it helps separate the StorifyMe element logically. We'll add videos directly to pinContainer below StorifyMe.
+
+             if (!videosToRender || videosToRender.length === 0) {
+                 // Append 'no videos' message after StorifyMe element
+                 pinContainer.insertAdjacentHTML('beforeend', '<p class="text-gray-500 text-center col-span-full py-10">No videos found.</p>');
+             } else {
+                 videosToRender.forEach(video => {
+                     // Append video cards after StorifyMe element
+                     pinContainer.insertAdjacentHTML('beforeend', createVideoCardHTML(video));
+                 });
+                 attachVideoCardListeners(); // Attach listeners *after* adding videos
+             }
         }
+        // --- END OF MODIFIED renderVideos FUNCTION ---
 
         // --- Event Listener Functions ---
         function attachPinListeners() { const pins = pinContainer.querySelectorAll('.pin'); pins.forEach(pin => { pin.removeEventListener('click', handlePinClick); pin.addEventListener('click', handlePinClick); }); }
@@ -211,13 +241,16 @@
         function attachVideoCardListeners() { const videoCards = pinContainer.querySelectorAll('.video-card'); videoCards.forEach(card => { card.removeEventListener('click', handleVideoCardClick); card.addEventListener('click', handleVideoCardClick); }); }
 
         function handlePinClick(event) { if (event.target.closest('.save-button') || event.target.closest('.source-link')) return; openModal(event.currentTarget); }
-        function handleSaveClick(event) { /* ... (same as before) ... */
+
+        function handleSaveClick(event) {
             const saveButton = event.target.closest('.save-button'); if (!saveButton) return; const pinElement = saveButton.closest('.pin'); const pinId = pinElement?.dataset.id; if (!pinId) return;
             if (isPinSaved(pinId)) { if (removePinId(pinId)) { saveButton.classList.remove('saved'); saveButton.textContent = 'Save'; if (currentView === 'my-recipes' || currentView === 'profile') { pinElement.remove(); if (currentView === 'my-recipes' && pinContainer.querySelectorAll('.pin').length === 0) { renderPins([]); } const profileGrid = document.getElementById('profile-saved-pins-grid'); if (currentView === 'profile' && profileGrid && profileGrid.querySelectorAll('.pin').length === 0) { profileGrid.innerHTML = '<p class="text-gray-500 col-span-full">No recipes saved yet.</p>'; } } } }
             else { if (savePinId(pinId)) { saveButton.classList.add('saved'); saveButton.textContent = 'Saved'; } }
         }
+
         function handleVideoCardClick(event) { const card = event.currentTarget; const videoId = card.dataset.videoId; if (videoId) { openVideoPlayer(videoId); } }
-        function openModal(pinElement) { /* ... (same as before) ... */
+
+        function openModal(pinElement) {
             const pinId = pinElement?.dataset.id; const pin = pinData.find(p => p.id === pinId); if (!pin) return; const imageElement = pinElement.querySelector('img'); const imgSrc = imageElement ? imageElement.src : 'https://placehold.co/600x600/ccc/ffffff?text=No+Image'; const imgAlt = pin.altText || 'Pin image'; const sourceHref = pin.sourceUrl || '#'; const domainName = getDomainFromUrl(pin.sourceUrl);
             modalImage.src = imgSrc; modalImage.alt = imgAlt; modalTitle.textContent = imgAlt; modalDescription.textContent = `Details for "${imgAlt}". Description from a real source would go here. (ID: ${pinId})`;
             if (modalUsername) { modalUsername.textContent = domainName || 'Source'; }
@@ -225,27 +258,27 @@
             const modalSaveButton = modal.querySelector('.modal-save-button'); if (modalSaveButton) { if (isPinSaved(pinId)) { modalSaveButton.textContent = 'Saved'; modalSaveButton.classList.add('saved'); } else { modalSaveButton.textContent = 'Save'; modalSaveButton.classList.remove('saved'); } modalSaveButton.dataset.pinId = pinId; }
             modal.classList.remove('hidden'); modal.classList.add('flex'); document.body.style.overflow = 'hidden';
         }
+
         function closeModal() { modal.classList.add('hidden'); modal.classList.remove('flex'); document.body.style.overflow = ''; }
         function setActiveTab(activeTabElement) { navItems.forEach(item => item.classList.remove('active')); if (activeTabElement) activeTabElement.classList.add('active'); }
 
         // --- Video Player Functions ---
-        function displayVideoInPlayer(index) { /* ... (same as before) ... */ if (index < 0 || index >= videoData.length) return; const video = videoData[index]; videoPlayerImage.src = video.videoUrl; videoPlayerImage.alt = video.title || 'Video content'; videoPlayerTitle.textContent = video.title || ''; videoPlayerUploader.textContent = `By ${video.uploader || 'Unknown Uploader'}`; currentVideoIndex = index; }
-        function openVideoPlayer(videoId) { /* ... (same as before) ... */ const initialIndex = videoData.findIndex(v => v.id === videoId); if (initialIndex === -1) return; displayVideoInPlayer(initialIndex); videoPlayerModal.classList.remove('hidden'); videoPlayerModal.classList.add('flex'); document.body.style.overflow = 'hidden'; videoPlayerModal.addEventListener('touchstart', handleTouchStart, { passive: true }); videoPlayerModal.addEventListener('touchmove', handleTouchMove, { passive: true }); videoPlayerModal.addEventListener('touchend', handleTouchEnd); }
-        function closeVideoPlayer() { /* ... (same as before) ... */ videoPlayerModal.classList.add('hidden'); videoPlayerModal.classList.remove('flex'); document.body.style.overflow = ''; currentVideoIndex = -1; videoPlayerModal.removeEventListener('touchstart', handleTouchStart); videoPlayerModal.removeEventListener('touchmove', handleTouchMove); videoPlayerModal.removeEventListener('touchend', handleTouchEnd); }
+        function displayVideoInPlayer(index) { if (index < 0 || index >= videoData.length) return; const video = videoData[index]; videoPlayerImage.src = video.videoUrl; videoPlayerImage.alt = video.title || 'Video content'; videoPlayerTitle.textContent = video.title || ''; videoPlayerUploader.textContent = `By ${video.uploader || 'Unknown Uploader'}`; currentVideoIndex = index; }
+        function openVideoPlayer(videoId) { const initialIndex = videoData.findIndex(v => v.id === videoId); if (initialIndex === -1) return; displayVideoInPlayer(initialIndex); videoPlayerModal.classList.remove('hidden'); videoPlayerModal.classList.add('flex'); document.body.style.overflow = 'hidden'; videoPlayerModal.addEventListener('touchstart', handleTouchStart, { passive: true }); videoPlayerModal.addEventListener('touchmove', handleTouchMove, { passive: true }); videoPlayerModal.addEventListener('touchend', handleTouchEnd); }
+        function closeVideoPlayer() { videoPlayerModal.classList.add('hidden'); videoPlayerModal.classList.remove('flex'); document.body.style.overflow = ''; currentVideoIndex = -1; videoPlayerModal.removeEventListener('touchstart', handleTouchStart); videoPlayerModal.removeEventListener('touchmove', handleTouchMove); videoPlayerModal.removeEventListener('touchend', handleTouchEnd); }
 
         // --- Swipe Logic ---
         function handleTouchStart(event) { touchStartY = event.touches[0].clientY; touchEndY = touchStartY; }
         function handleTouchMove(event) { touchEndY = event.touches[0].clientY; }
-        function handleTouchEnd() { /* ... (same as before) ... */ const deltaY = touchEndY - touchStartY; if (Math.abs(deltaY) > swipeThreshold) { if (deltaY < 0) { const nextIndex = currentVideoIndex + 1; if (nextIndex < videoData.length) { displayVideoInPlayer(nextIndex); } } else { const prevIndex = currentVideoIndex - 1; if (prevIndex >= 0) { displayVideoInPlayer(prevIndex); } } } touchStartY = 0; touchEndY = 0; }
+        function handleTouchEnd() { const deltaY = touchEndY - touchStartY; if (Math.abs(deltaY) > swipeThreshold) { if (deltaY < 0) { const nextIndex = currentVideoIndex + 1; if (nextIndex < videoData.length) { displayVideoInPlayer(nextIndex); } } else { const prevIndex = currentVideoIndex - 1; if (prevIndex >= 0) { displayVideoInPlayer(prevIndex); } } } touchStartY = 0; touchEndY = 0; }
 
         // --- AI Chat Functions ---
-        function openAiChat() { /* ... (same as before) ... */
+        function openAiChat() {
             nextMessageIndex = 0; aiChatMessages.innerHTML = ''; aiChatModal.classList.remove('hidden'); aiChatModal.classList.add('flex'); document.body.style.overflow = 'hidden'; addNextChatMessage();
         }
-        function closeAiChat() { /* ... (same as before) ... */
+        function closeAiChat() {
             aiChatModal.classList.add('hidden'); aiChatModal.classList.remove('flex'); document.body.style.overflow = '';
         }
-        // ** Updated addNextChatMessage with Recipe Card Row Logic **
         function addNextChatMessage() {
             if (!aiChatMessages || nextMessageIndex >= dummyChatMessages.length) {
                 if (nextMessageIndex === dummyChatMessages.length && aiChatMessages) {
@@ -304,7 +337,6 @@
 
             if (message.type === 'recipeCard' && message.recipe && recipeRowContainer) {
                 const recipe = message.recipe;
-                // Removed incorrect comments from this template literal
                 const cardHTML = `
                     <div class="recipe-card bg-white dark:bg-gray-600 rounded-md overflow-hidden shadow border border-gray-300 dark:border-gray-500 w-36 flex-shrink-0">
                         <img src="${recipe.imageUrl}" alt="${recipe.title}" class="w-full h-20 object-cover" onerror="this.onerror=null; this.src='https://placehold.co/150x100/cccccc/999999?text=No+Image';">
@@ -325,28 +357,46 @@
 
 
         // --- Search Functionality ---
-        function handleSearchInput() { /* ... (same as before) ... */
+        function handleSearchInput() {
             const searchTerm = searchInput.value.toLowerCase().trim();
             if (currentView === 'community') { const filteredCommunities = communityData.filter(community => { const nameMatch = community.name && community.name.toLowerCase().includes(searchTerm); const descMatch = community.description && community.description.toLowerCase().includes(searchTerm); return nameMatch || descMatch; }); renderCommunities(filteredCommunities); }
             else if (currentView === 'profile') { const savedPins = getSavedPinsData(); const filteredPins = savedPins.filter(pin => { return pin.altText && typeof pin.altText === 'string' && pin.altText.toLowerCase().includes(searchTerm); }); const savedPinsGrid = document.getElementById('profile-saved-pins-grid'); if (savedPinsGrid) { savedPinsGrid.innerHTML = ''; if (!filteredPins || filteredPins.length === 0) { savedPinsGrid.innerHTML = '<p class="text-gray-500 col-span-full">No matching saved recipes found.</p>'; } else { filteredPins.forEach(pin => { savedPinsGrid.insertAdjacentHTML('beforeend', createPinElementHTML(pin)); }); attachProfilePinListeners(savedPinsGrid); } } }
-            else if (currentView === 'video') { const filteredVideos = videoData.filter(video => { return video.title && typeof video.title === 'string' && video.title.toLowerCase().includes(searchTerm); }); renderVideos(filteredVideos); }
+            else if (currentView === 'video') { const filteredVideos = videoData.filter(video => { return video.title && typeof video.title === 'string' && video.title.toLowerCase().includes(searchTerm); }); renderVideos(filteredVideos); } // Re-render videos, StorifyMe will be included
             else { let sourceData = (currentView === 'my-recipes') ? getSavedPinsData() : pinData; const filteredPins = sourceData.filter(pin => { return pin.altText && typeof pin.altText === 'string' && pin.altText.toLowerCase().includes(searchTerm); }); renderPins(filteredPins, currentView === 'my-recipes' ? 'view-pins' : 'view-pins'); }
         }
 
         // --- Navigation ---
-        function handleNavClick(event) { /* ... (same as before) ... */
-            event.preventDefault(); const targetTabElement = event.currentTarget; const targetTab = targetTabElement.dataset.tab; if (targetTabElement.classList.contains('active')) return; currentView = targetTab; setActiveTab(targetTabElement); searchInput.value = ''; updateSearchPlaceholder(); pinContainer.className = 'pin-container';
+        function handleNavClick(event) {
+            event.preventDefault(); const targetTabElement = event.currentTarget; const targetTab = targetTabElement.dataset.tab; if (targetTabElement.classList.contains('active')) return; currentView = targetTab; setActiveTab(targetTabElement); searchInput.value = ''; updateSearchPlaceholder();
+            // Clear container immediately for smoother transition (StorifyMe handled within renderVideos)
+            // pinContainer.innerHTML = ''; // Clear content for all tab switches
+
             switch (targetTab) {
-                case 'home': renderPins(pinData); break;
-                case 'video': renderVideos(videoData); break;
-                case 'community': renderCommunities(communityData); break;
-                case 'my-recipes': renderPins(getSavedPinsData()); break;
-                case 'profile': const savedPins = getSavedPinsData(); renderProfilePage(tomProfileData, communityData, savedPins); break;
-                default: currentView = 'home'; setActiveTab(document.querySelector('.bottom-nav-item[data-tab="home"]')); updateSearchPlaceholder(); renderPins(pinData);
+                case 'home':
+                    renderPins(pinData);
+                    break;
+                case 'video':
+                    renderVideos(videoData); // This function now handles StorifyMe insertion
+                    break;
+                case 'community':
+                    renderCommunities(communityData);
+                    break;
+                case 'my-recipes':
+                    renderPins(getSavedPinsData());
+                    break;
+                case 'profile':
+                    const savedPins = getSavedPinsData();
+                    renderProfilePage(tomProfileData, communityData, savedPins);
+                    break;
+                default: // Fallback to home
+                    currentView = 'home';
+                    setActiveTab(document.querySelector('.bottom-nav-item[data-tab="home"]'));
+                    updateSearchPlaceholder();
+                    renderPins(pinData);
             }
         }
         function getSavedPinsData() { const savedIds = getSavedPinIds(); return pinData.filter(pin => savedIds.includes(pin.id)); }
-        function updateSearchPlaceholder() { /* ... (same as before) ... */
+        function updateSearchPlaceholder() {
              if (currentView === 'community') searchInput.placeholder = "Search communities...";
              else if (currentView === 'profile') searchInput.placeholder = "Search saved recipes...";
              else if (currentView === 'video') searchInput.placeholder = "Search videos...";
@@ -367,18 +417,14 @@
              // AI Chat Listeners
              if(aiChatButton) aiChatButton.addEventListener('click', openAiChat);
              if(closeAiChatButton) closeAiChatButton.addEventListener('click', closeAiChat);
-             // ** Updated AI Chat Tap Listener **
+             // AI Chat Tap Listener
              if(aiChatModal) {
                  aiChatModal.addEventListener('click', (event) => {
-                    // Prevent advancing chat if clicking interactive elements like buttons or links
                     if (event.target.closest('button') || event.target.closest('a')) {
-                        // Allow close button to function
                         if (event.target.closest('#closeAiChatButton')) { return; }
-                        // Prevent advancing if clicking other buttons/links (like recipe card links)
-                        return;
+                        return; // Don't advance if clicking interactive elements
                     }
-                    // If click is not on an interactive element, advance chat
-                    addNextChatMessage();
+                    addNextChatMessage(); // Advance chat on non-interactive click
                  });
              }
              // Modal Save Button Listener
