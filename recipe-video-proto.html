@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex">
+  <title>The Best Easy Pasta Salad</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script type="text/javascript" async defer src="https://cdn.storifyme.xyz/static/web-components/storifyme-elements.min.js"></script>
+  <style>
+    :root {
+      --plum: #643362; /* top bar + accents */
+      --text-dark: #333;
+      --brand: #6d2f55;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: "Inter", sans-serif;
+      color: var(--text-dark);
+      line-height: 1.6;
+      background: #ffffff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* ===== Top promo bar ===== */
+    .top-bar {
+      background: var(--plum);
+      color: #fff;
+      font-size: 0.9rem;
+      text-align: center;
+      padding: 0.45rem 0;
+    }
+    .top-bar a {
+      color: #ffeeba;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    /* ===== Global nav ===== */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      border-bottom: 1px solid #f3f3f3;
+    }
+    .brand {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: none;
+      display: flex;
+      align-items: flex-end;
+      gap: 0.25rem;
+    }
+    .brand span {
+      font-family: "Inter", sans-serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      padding-bottom: 0.15rem;
+    }
+    .nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    .nav a {
+      text-decoration: none;
+      color: var(--text-dark);
+      font-weight: 500;
+    }
+    .search-icon { font-size: 1.25rem; cursor:pointer; }
+
+    /* ===== Layout ===== */
+    main {
+      flex: 1 0 auto;
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 3rem;
+    }
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      aside.sidebar { margin-top: 4rem; }
+    }
+
+    /* ===== Recipe Section ===== */
+    .breadcrumb {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      color: #888;
+      margin-bottom: 1rem;
+    }
+    h1.recipe-title {
+      font-family: "Playfair Display", serif;
+      font-size: 2.8rem;
+      margin: 0 0 0.5rem 0;
+      line-height: 1.1;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+      margin-bottom: 0.75rem;
+    }
+    .star { color:#ffbe33; font-size: 1rem; }
+    .rating small { font-size: 0.9rem; }
+    .summary { margin-bottom: 1.5rem; }
+
+    .jump {
+      background: transparent;
+      border: 2px solid var(--plum);
+      color: var(--plum);
+      padding: 0.6rem 1.2rem;
+      font-weight: 600;
+      border-radius: 2rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .jump:hover { background: var(--plum); color:#fff; }
+
+    .hero-img {
+      width: 100%;
+      border-radius: 0.5rem;
+      margin-top: 2rem;
+    }
+
+    /* ===== Recipe Card ===== */
+    .recipe-card {
+      margin-top: 3rem;
+      border: 1px solid #eaeaea;
+      border-radius: 0.5rem;
+      padding: 2rem 1.5rem;
+    }
+    .recipe-card h2 {
+      font-family: "Playfair Display", serif;
+      font-size: 2rem;
+      margin-bottom: 1.25rem;
+    }
+    .recipe-meta {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .recipe-meta div {
+      background: #fafafa;
+      border-radius: 0.5rem;
+      padding: 0.75rem 0.5rem;
+      text-align: center;
+      font-size: 0.8rem;
+      line-height: 1.4;
+    }
+    .recipe-meta div span {
+      display: block;
+      font-weight: 600;
+      font-size: 1rem;
+      margin-top: 0.25rem;
+    }
+    .ingredients, .instructions { margin-bottom: 2rem; }
+    .ingredients h3, .instructions h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+      font-weight: 600;
+    }
+    .ingredients ul { list-style: disc inside; }
+    .instructions ol { list-style: decimal inside; }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      position: relative;
+      border: 1px solid #eaeaea;
+      border-radius: 0.5rem;
+      padding: 2.5rem 1.5rem 1.5rem;
+      text-align: center;
+      overflow: hidden;
+    }
+    .sidebar img {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      position: absolute;
+      top: -70px;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 6px solid #fff;
+    }
+    .sidebar h4 {
+      margin: 80px 0 0.5rem;
+      font-size: 1rem;
+      letter-spacing: 0.03rem;
+      font-weight: 700;
+    }
+    .sidebar p { font-size: 0.9rem; line-height: 1.5; margin: 1rem 0; }
+    .learn { color: var(--plum); font-weight: 700; text-decoration:none; display:inline-block; margin-top:1rem; }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #f7f7f7;
+      padding: 2.5rem 1rem;
+      font-size: 0.9rem;
+      color: #666;
+    }
+    .footer-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2rem;
+    }
+    .footer-inner h4 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+    .footer-inner ul { list-style: none; }
+    .footer-inner li { margin-bottom: 0.4rem; }
+    .footer-inner a { text-decoration: none; color: inherit; }
+    .copyright { text-align: center; margin-top:2rem; font-size:0.8rem; }
+
+    storifyme-story{
+        height:80vh;
+        margin:auto;
+    }
+  </style>
+</head>
+<body>
+  
+
+  <!-- ===== Navigation ===== -->
+  <header class="nav">
+    <a class="brand" href="#">recipeproto</a>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Recipes</a></li>
+        <li><a href="#">Start Here</a></li>
+      </ul>
+    </nav>
+    <div class="search-icon" aria-label="Search">🔍</div>
+  </header>
+
+  <!-- ===== Page Content ===== -->
+  <main>
+    <!-- === Left column: recipe === -->
+    <section>
+      <div class="breadcrumb">RECIPES › PASTA › THE BEST EASY PASTA SALAD</div>
+      <h1 class="recipe-title">The Best Easy Pasta Salad</h1>
+      <div class="rating">
+        <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">☆</span>
+        <small>115 reviews / 4.5 average</small>
+      </div>
+      <p class="summary"><strong>Super easy Pasta Salad</strong> – with pasta, tomatoes, fresh mozzarella, spicy salami, pepperoncini, olives, and easy Italian dressing. <strong>DANGEROUSLY GOOD.</strong></p>
+      <a href="#recipe-card" class="jump">↓ JUMP TO RECIPE</a>
+      <p class="summary" style="margin-top: 1.5rem">Meet your new summer bestie: A stupidly easy pasta salad with pasta, juicy tomatoes, fresh mozzarella, red onion, salami, olives, herbs, and a drench of quick homemade dressing.</p>
+      <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1350&q=80" alt="Pasta salad" class="hero-img" />
+
+      <storifyme-story account="pinchofyum-2302815" story="191121" env="eu" autoplay="true" additional-widgets="8857"></storifyme-story>
+
+      <!-- === Recipe Card === -->
+      <article id="recipe-card" class="recipe-card">
+        <h2>Recipe</h2>
+        <div class="recipe-meta">
+          <div>Prep Time<span>20 mins</span></div>
+          <div>Cook Time<span>15 mins</span></div>
+          <div>Total Time<span>35 mins</span></div>
+          <div>Yield<span>8 servings</span></div>
+        </div>
+        <div class="ingredients">
+          <h3>Ingredients</h3>
+          <ul>
+            <li>1 lb rotini pasta, cooked al dente</li>
+            <li>2 cups cherry tomatoes, halved</li>
+            <li>8 oz fresh mozzarella pearls</li>
+            <li>6 oz spicy salami, diced</li>
+            <li>1/2 cup sliced pepperoncini</li>
+            <li>1/2 cup Kalamata olives, pitted</li>
+            <li>1/4 cup minced red onion</li>
+            <li>1/3 cup chopped fresh herbs (basil + parsley)</li>
+            <li>1 cup bottled or homemade Italian dressing</li>
+            <li>Salt & freshly‑ground black pepper, to taste</li>
+          </ul>
+        </div>
+        <div class="instructions">
+          <h3>Instructions</h3>
+          <ol>
+            <li><strong>Cook the pasta</strong> in well‑salted water according to package directions. Drain and rinse under cold water until cool.</li>
+            <li><strong>Toss it together.</strong> In a large bowl, combine pasta, tomatoes, mozzarella, salami, pepperoncini, olives, onion, and herbs.</li>
+            <li><strong>Dress.</strong> Pour dressing over the salad, starting with about 3/4 cup. Toss to coat, taste, and add the remainder as needed.</li>
+            <li><strong>Season & serve.</strong> Finish with salt and plenty of black pepper. Chill for 30 minutes (if you can wait) for flavors to meld, then dig in!</li>
+          </ol>
+        </div>
+      </article>
+
+      <storifyme-collection account="pinchofyum-2302815" widget="8857" env="eu"></storifyme-collection>
+      
+    </section>
+
+    <!-- === Right column: author sidebar === -->
+    <aside class="sidebar">
+      <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80" alt="Author portrait" />
+      <h4>Hey there</h4>
+      <p>I'm a blogger and this is my bio section.</p>
+      <a class="learn" href="#">LEARN MORE</a>
+    </aside>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#">Recipe Index</a></li>
+          <li><a href="#">Quick & Easy</a></li>
+          <li><a href="#">Healthy</a></li>
+          <li><a href="#">Instant Pot</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>About</h4>
+        <ul>
+          <li><a href="#">Our Story</a></li>
+          <li><a href="#">Meet the Team</a></li>
+          <li><a href="#">Work With Us</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Pinterest</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">YouTube</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Newsletter</h4>
+        <p>Stay up to date with new recipes and exclusive content.</p>
+        <form action="#" style="margin-top:0.5rem;">
+          <input type="email" placeholder="Email address" style="padding:0.5rem; border:1px solid #ccc; border-radius:0.25rem; width:100%; max-width:220px;" />
+          <button type="submit" style="margin-top:0.5rem; padding:0.5rem 1rem; background:var(--plum); color:#fff; border:none; border-radius:0.25rem; cursor:pointer;">Subscribe</button>
+        </form>
+      </div>
+    </div>
+    <p class="copyright">© <span id="year"></span> Pinch of Yum. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Update year automatically
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
