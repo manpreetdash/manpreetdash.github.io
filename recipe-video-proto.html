@@ -234,16 +234,41 @@
     .copyright { text-align: center; margin-top:2rem; font-size:0.8rem; }
 
     storifyme-story{
-        height:80vh;
         margin:auto;
+        width:100%;
+    }
+
+    .poyembed{
+      width:75%;
+      height:65vh;
+      margin:auto;
+      position:relative;
+      border:1px solid;
+      border-color: var(--brand);
+      position:relative;
+      border-radius: 8px;
+      overflow:hidden;
+    }
+
+    .poyembedlabel{
+      position:absolute;
+      bottom:-15px;
+      left:50%;
+      transform: translateX(-50%);
+      background-color:var(--brand);
+      color:white;
+      padding-left:30px;
+      padding-right:30px;
+      border-radius:20px;
+      line-height:30px;
     }
 
     .poyshorts{
       border: 2px solid;
       border-color:var(--brand);
     border-radius: 8px;
-    padding:10px;
     padding-top: 20px;
+    padding-bottom: 20px;
     margin-top:20px;
     margin-bottom:20px;
     position: relative;
@@ -294,7 +319,14 @@
       <p class="summary" style="margin-top: 1.5rem">Meet your new summer bestie: A stupidly easy pasta salad with pasta, juicy tomatoes, fresh mozzarella, red onion, salami, olives, herbs, and a drench of quick homemade dressing.</p>
       <img src="https://images.unsplash.com/photo-1504754524776-8f4f37790ca0?auto=format&fit=crop&w=1350&q=80" alt="Pasta salad" class="hero-img" />
 
-      <storifyme-story account="pinchofyum-2302815" story="191121" env="eu" autoplay="true" additional-widgets="8857"></storifyme-story>
+      <div class="poyembed">
+        <storifyme-story account="pinchofyum-2302815" story="191121" env="eu" autoplay="true" additional-widgets="8857"></storifyme-story>
+        <div class="poyembedlabel">
+          PLAY
+        </div>
+      </div>
+
+      
 
       <!-- === Recipe Card === -->
       <article id="recipe-card" class="recipe-card">
