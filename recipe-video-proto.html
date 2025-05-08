@@ -8,6 +8,7 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <script type="text/javascript" async defer src="https://cdn.storifyme.xyz/static/web-components/storifyme-elements.min.js"></script>
+  <link href="https://db.onlinewebfonts.com/c/606b1391d3787410fee41d57fd5a1920?family=Drama+Regular" rel="stylesheet">
   <style>
     :root {
       --plum: #643362; /* top bar + accents */
@@ -276,16 +277,35 @@
     align-items: center;
     }
 
-    .shortslogo{
-      position: absolute;
-    top: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50%;
-    background-color:white;
-    padding-left:20px;
-    padding-right:20px;
-    }
+.shortslogo{
+  display: flex;
+  position:absolute;
+  left:50%;
+  transform: translateX(-50%);
+  background-color:white;
+  top:-60px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    gap: 10px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.shortslogo svg{
+  height: 35px;
+    width: auto;
+}
+
+.shortslogo .shortstext{
+  font-family: 'Drama Regular', sans-serif;
+  color:rgb(128 128 128);
+    font-size: 60px;
+    margin-bottom:20px;
+    
+}
+
+   
 
   </style>
 </head>
@@ -385,7 +405,9 @@
                 </g>
               </g>
             </g>
-          <title>Pinch of Yum logo</title></svg>
+          <title>Pinch of Yum logo</title>
+        </svg>
+          <div class="shortstext">shorts</div>
         </div>
 
         <storifyme-collection account="raptive-2947133" widget="8963" env="eu"></storifyme-collection>
