@@ -29,7 +29,7 @@ Testing bsky comments
   import {BlueskyComments, BlueskyFilters} from 'https://unpkg.com/bluesky-comments@0.11.0/dist/bluesky-comments.es.js';
 
 
-  const uri = 'https://bsky.app/profile/coryzue.com/post/3lbrko5zsgk24';
+  const uri = 'https://bsky.app/profile/tomcritchlow.com/post/3lmdxrq2wsc2v';
   const author = 'coryzue.com';
   const container = document.getElementById('bluesky-comments');
   const root = createRoot(container);
