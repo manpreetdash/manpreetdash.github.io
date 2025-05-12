@@ -4,7 +4,7 @@ subtitle: What happens next
 layout: blog
 ---
 
-Testing bsky comments
+Testing bsky comments from here: https://www.coryzue.com/writing/bluesky-comments/
 
 <div id="bluesky-comments"></div>
 
