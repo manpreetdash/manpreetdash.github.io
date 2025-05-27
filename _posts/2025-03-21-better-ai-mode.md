@@ -210,3 +210,6 @@ So if you have a stake in the web (see my disclosures below!) I would suggest th
 
 *Disclosure: I probably have too many conflicts of interest to name individually. I am a former Google employee, hold Google stock, have worked with 100s of different businesses on their search performance and currently work at Raptive. I'm also an un-ashamed advocate for the open web. Consider me biased. However, all opinions here are purely my own.*
 
+--
+
+* Update May 27th, 2025: [I liked this perspective](https://x.com/pashmerepat/status/1926717705660375463?t=IN1_YgacqtUk_X_COZBXcw&s=19), that maybe RAG is actually a dead end and that agentic search is just a better paradigm. Agentic search is much more like what I'm describing here and RAG is the core underpinning of AI Mode and AI Overviews....*
