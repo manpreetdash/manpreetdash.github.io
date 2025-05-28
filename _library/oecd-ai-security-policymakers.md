@@ -6,5 +6,6 @@ link: "[https://oecd.ai/en/wonk/policymakers-prioritise-security]"
 ---
 
 The OECD.AI Policy Observatory combines resources from across the OECD and its partners from all stakeholder groups. It facilitates dialogue and provides multidisciplinary, evidence-based policy analysis and data on AI’s areas of impact.
-https://oecd.ai/en/wonk/policymakers-prioritise-security
+
+[https://oecd.ai/en/wonk/policymakers-prioritise-security]
 
