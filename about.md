@@ -3,9 +3,15 @@ layout: blog
 title: About Me
 ---
 
-Hi there, I'm based in Evanston, IL and currently do independent consulting work for media and technology companies. I also run the SEO MBA. I'm always happy to grab a coffee or a zoom!
+Deep-tech shifts the market when someone architects its leap from technology and proof-of-concept to product/platform. I’m drawn to technologies that feel “too early” until they’re inevitable - and to teams that turn them into reality. 
 
-Get in touch: [tjcritchlow@gmail.com](mailto:tjcritchlow@gmail.com) / [@tomcritchlow](http://twitter.com/tomcritchlow) 
+I first turned a research-grade industrial fluid sensor into a commercial product adopted across 15+ industry verticals, stitching product (hardware), software, supply chain and go-to-market from zero. Later, I framed and launched the still-nascent field of AI security within a corporate venture, building the motions that won its earliest enterprise champions and entered the public-policy discourse. Most recently, I worked with a Fortune 100 innovative software division on growth & transformation to redirect executive strategy toward domain-led platforms, aligning portfolio, GTM and M&A around bold deep-tech bets.
+
+Builder, operator, evangelist, strategist - four lenses, one pursuit: making frontier ideas in AI, cybersecurity and industrial automation/SaaS change the world. 
+
+I'm always happy to grab a coffee or a zoom!
+
+Get in touch: [mdmanpreetdash@gmail.com](mailto:mdmanpreetdash@gmail.com) / [@ManpreetDash](http://x.com/ManpreetDash) 
 
 <hr class="mv4">
 
@@ -31,7 +37,19 @@ z-index:-1
 <div class="pl3 pb4 w-90">
 <strong>Bosch</strong>
 <div class="black-50 f6">2014 - Present</div>
-<div class="lh-copy f5">Helping media and technology companies build new growth capabilities through product innovation, SEO programs, content marketing and brand. Working with clients like The New York Times, Gartner, Etsy, Angi, Finder, Dotdash, Ziff Davis and more.</div>
+<div class="lh-copy f5">Defining and implementing the strategy and growth plan for 2030 Horizon, targeting a 5x revenue growth through multiple fields of action: Portfolio & Sales Redesign, Innovation, Inorganic Growth (M&A), AI.</div>
+</div>
+</div>
+
+<div class="flex items-stretch">
+<div class="relative ">
+<div class="greentimeline"></div>
+<img src="https://www.google.com/s2/favicons?domain=boschaishield.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+</div>
+<div class="pl3 pb4 w-90">
+<strong>Bosch AIShield</strong>
+<div class="black-50 f6">2022 - 2024</div>
+<div class="lh-copy f5">First Business Hire. Led end-to-end setup of marketing, sales, partnerships, community building, operations, and recruitment. Instrumental in securing key PoCs, clients, integrations and strategic partnerships and setting up the 0 to 1 in AIShield Business. Led to $1M+ revenue in 24 months. </div>
 </div>
 </div>
 
@@ -43,7 +61,7 @@ z-index:-1
 <div class="pl3 pb4 w-90">
 <strong>Rheonics</strong>
 <div class="black-50 f6">2021 - Present</div>
-<div class="lh-copy f5">Launched a professional development platform for SEO professionals.  </div>
+<div class="lh-copy f5">Expanded market footprint, developed partnerships, and led global marketing, contributing to >50% YoY growth. Authored 40+ technical notes, drove multi-channel marketing efforts, trained and expanded distributor network and achieved industry recognition. </div>
 </div>
 </div>
 
@@ -54,8 +72,8 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Perplexity</strong>
-<div class="black-50 f6">2013 - Present</div>
-<div class="lh-copy f5">Created Fiercely Curious, a Brooklyn art collective with pop-up art shows around Brooklyn and custom art installations for private and corporate clients.</div>
+<div class="black-50 f6">2025 - Present</div>
+<div class="lh-copy f5">Member of Perplexity's inaugural AI Business Fellowship program.</div>
 </div>
 </div>
 
@@ -66,32 +84,8 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>World Economic Forum</strong>
-<div class="black-50 f6">2012 - 2014</div>
-<div class="lh-copy f5">Working with internal innovation teams like the Creative Lab, Google Cardboard, Jamboard and BizOps I helped to ideate, develop and bring to market new products and services. With one foot in creative and one foot in business I helped to add rigor to creative ideas and creativity to spreadsheets.</div>
-</div>
-</div>
-
-<div class="flex items-stretch">
-<div class="relative">
-<div class="greentimeline"></div>
-<img src="/images/7books-favicon.ico" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
-</div>
-<div class="pl3 pb4 w-90">
-<strong>Launched 7books</strong>
-<div class="black-50 f6">2011-2013</div>
-<div class="lh-copy f5">Launched my first python project 7books, playlists for bookworms. Grew to over 6,000 users.</div>
-</div>
-</div>
-
-<div class="flex items-stretch">
-<div class="relative">
-<div class="greentimeline"></div>
-<img src="/images/distilled-favicon.jpeg" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
-</div>
-<div class="pl3 pb4 w-90">
-<strong>Distilled: VP Operations, NYC</strong>
-<div class="black-50 f6">2007 - 2012</div>
-<div class="lh-copy f5">Working alongside my brother I helped build Distilled from a team of 3 into a team of 50+ across three offices. I built the SEO capability for Distilled from the ground up, built the NYC office and client base and spoke at conferences across the world.</div>
+<div class="black-50 f6">2025 - Present</div>
+<div class="lh-copy f5">In collaboration with the World Economic Forum’s Global Foresight Network (GFN) and the Global Shapers Community, this initiative empowers a cohort of 50 emerging leaders to develop and advance policies that prioritize the interests of both present and future generations.</div>
 </div>
 </div>
 
