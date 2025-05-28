@@ -15,7 +15,7 @@ Get in touch: [mdmanpreetdash@gmail.com](mailto:mdmanpreetdash@gmail.com) / [@Ma
 
 <hr class="mv4">
 
-<div class="ttu f4 newgreen tracked b pb3">Timeline</div>
+<div class="ttu f4 newgreen tracked b pb3">PROFESSIONAL TIMELINE</div>
 
 <style>
 .greentimeline{
@@ -64,6 +64,22 @@ z-index:-1
 <div class="lh-copy f5">Expanded market footprint, developed partnerships, and led global marketing, contributing to >50% YoY growth. Authored 40+ technical notes, drove multi-channel marketing efforts, trained and expanded distributor network and achieved industry recognition. </div>
 </div>
 </div>
+
+<hr class="mv4">
+
+<div class="ttu f4 newgreen tracked b pb3">OUTSIDE WORK</div>
+
+<style>
+.greentimeline{
+position:absolute;
+border-left:1px solid #02AD28;
+top:0px;
+left:50%;
+width:50%;
+height:100%;
+z-index:-1
+}
+</style>
 
 <div class="flex items-stretch">
 <div class="relative">
