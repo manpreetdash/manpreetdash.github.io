@@ -117,6 +117,8 @@ z-index:-1
 </div>
 </div>
 
+<hr class="mv4">
+
 <div class="ttu f4 newgreen tracked b pb3">EDUCATION</div>
 
 <style>
