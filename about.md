@@ -35,7 +35,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=bosch.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Bosch</strong>
+<strong>Bosch | Corporate Strategy & Transformation </strong>
 <div class="black-50 f6">2024 - 2025</div>
 <div class="lh-copy f5">Defining and implementing the strategy and growth plan for 2030 Horizon, targeting a 5x revenue growth through multiple fields of action: Portfolio & Sales Redesign, Innovation, Inorganic Growth (M&A), AI.</div>
 </div>
@@ -47,7 +47,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=boschaishield.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Bosch AIShield</strong>
+<strong>Bosch AIShield | Product Marketing & Business Development </strong>
 <div class="black-50 f6">2022 - 2024</div>
 <div class="lh-copy f5">First Business Hire. Led end-to-end setup of marketing, sales, partnerships, community building, operations, and recruitment. Instrumental in securing key PoCs, clients, integrations and strategic partnerships and setting up the 0 to 1 in AIShield Business. Led to $1M+ revenue in 24 months. </div>
 </div>
@@ -59,7 +59,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=rheonics.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Rheonics</strong>
+<strong>Rheonics | Market Development, Quality & Certifications, Product Management </strong>
 <div class="black-50 f6">2021 - Present</div>
 <div class="lh-copy f5">Expanded market footprint, developed partnerships, and led global marketing, contributing to >50% YoY growth. Authored 40+ technical notes, drove multi-channel marketing efforts, trained and expanded distributor network and achieved industry recognition. </div>
 </div>
@@ -87,7 +87,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=weforum.org&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>World Economic Forum</strong>
+<strong>World Economic Forum | Future 50 Leader </strong>
 <div class="black-50 f6">2025 - Present</div>
 <div class="lh-copy f5">In collaboration with the World Economic Forum’s Global Foresight Network (GFN) and the Global Shapers Community, this initiative empowers a cohort of 50 emerging leaders to develop and advance policies that prioritize the interests of both present and future generations.</div>
 </div>
@@ -99,7 +99,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Perplexity</strong>
+<strong>Perplexity | AI Business Fellow </strong>
 <div class="black-50 f6">2025 - Present</div>
 <div class="lh-copy f5">Member of Perplexity's inaugural AI Business Fellowship program.</div>
 </div>
@@ -111,7 +111,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=mckinsey.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>McKinsey & Company</strong>
+<strong>McKinsey & Company | Forward Learner </strong>
 <div class="black-50 f6">2025 - Present</div>
 <div class="lh-copy f5">Member of McKinsey's Forward Learner's Program. </div>
 </div>
