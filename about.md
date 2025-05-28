@@ -138,7 +138,7 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Indian Institute of Technology, Kharagpur (IITKGP)  </strong>
-<div class="black-50 f6">2025 - Present</div>
+<div class="black-50 f6">2014 - 2019</div>
 <div class="lh-copy f5">B.Tech in Manufacturing Science & Engineering + M.Tech in Industrial Engineering & Management </div>
 </div>
 </div>
