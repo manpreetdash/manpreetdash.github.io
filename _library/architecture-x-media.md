@@ -1,6 +1,6 @@
 ---
 title: architecture-x-media
-tags: [artificial intelligence, my publications, cybersecurity]
+tags: [artificial-intelligence, my-publications, cybersecurity]
 date_saved: 2025-01-07
 ---
 
