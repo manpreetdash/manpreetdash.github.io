@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: About Me
+title: Background
 ---
 
 Deep-tech shifts the market when someone architects its leap from technology and proof-of-concept to product/platform. I’m drawn to technologies that feel “too early” until they’re inevitable - and to teams that turn them into reality. 
@@ -114,6 +114,32 @@ z-index:-1
 <strong>McKinsey & Company | Forward Learner </strong>
 <div class="black-50 f6">2025 - Present</div>
 <div class="lh-copy f5">Member of McKinsey's Forward Learner's Program. </div>
+</div>
+</div>
+
+<div class="ttu f4 newgreen tracked b pb3">EDUCATION</div>
+
+<style>
+.greentimeline{
+position:absolute;
+border-left:1px solid #02AD28;
+top:0px;
+left:50%;
+width:50%;
+height:100%;
+z-index:-1
+}
+</style>
+
+<div class="flex items-stretch">
+<div class="relative">
+<div class="greentimeline"></div>
+<img src="https://www.google.com/s2/favicons?domain=www.iitkgp.ac.in&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+</div>
+<div class="pl3 pb4 w-90">
+<strong>Indian Institute of Technology, Kharagpur (IITKGP)  </strong>
+<div class="black-50 f6">2025 - Present</div>
+<div class="lh-copy f5">B.Tech in Manufacturing Science & Engineering + M.Tech in Industrial Engineering & Management </div>
 </div>
 </div>
 
