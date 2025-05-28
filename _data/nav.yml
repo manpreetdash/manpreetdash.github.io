@@ -34,6 +34,6 @@ groups:
       - name: LinkedIn
         feathericon: linkedin
         url: "https://www.linkedin.com/in/tomcritchlow/"                     
-      - name: Are.na
-        feathericon: bookmark
-        url: "https://www.are.na/tom-critchlow/index"                             
+      # - name: Are.na
+      #  feathericon: bookmark
+      #  url: "https://www.are.na/tom-critchlow/index"                       
