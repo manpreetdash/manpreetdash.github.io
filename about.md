@@ -36,7 +36,7 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Bosch</strong>
-<div class="black-50 f6">2014 - Present</div>
+<div class="black-50 f6">2024 - 2025</div>
 <div class="lh-copy f5">Defining and implementing the strategy and growth plan for 2030 Horizon, targeting a 5x revenue growth through multiple fields of action: Portfolio & Sales Redesign, Innovation, Inorganic Growth (M&A), AI.</div>
 </div>
 </div>
@@ -96,7 +96,7 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative">
 <div class="greentimeline"></div>
-<img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+<img src="https://www.google.com/s2/favicons?domain=weforum.org&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
 <strong>World Economic Forum</strong>
