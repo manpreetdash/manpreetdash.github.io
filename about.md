@@ -5,8 +5,6 @@ title: Background
 
 Deep-tech shifts the market when someone architects its leap from technology and proof-of-concept to product/platform. I’m drawn to technologies that feel “too early” until they’re inevitable - and to teams that turn them into reality. 
 
-I first turned a research-grade industrial fluid sensor into a commercial product adopted across 15+ industry verticals, stitching product (hardware), software, supply chain and go-to-market from zero. Later, I framed and launched the still-nascent field of AI security within a corporate venture, building the motions that won its earliest enterprise champions and entered the public-policy discourse. Most recently, I worked with a Fortune 100 innovative software division on growth & transformation to redirect executive strategy toward domain-led platforms, aligning portfolio, GTM and M&A around bold deep-tech bets.
-
 Builder, operator, evangelist, strategist - four lenses, one pursuit: making frontier ideas in AI, cybersecurity and industrial automation/SaaS change the world. 
 
 I'm always happy to grab a coffee or a zoom!
@@ -147,6 +145,8 @@ z-index:-1
 
 
 ## How I Got Here
+
+I first turned a research-grade industrial fluid sensor into a commercial product adopted across 15+ industry verticals, stitching product (hardware), software, supply chain and go-to-market from zero. Later, I framed and launched the still-nascent field of AI security within a corporate venture, building the motions that won its earliest enterprise champions and entered the public-policy discourse. Most recently, I worked with a Fortune 100 innovative software division on growth & transformation to redirect executive strategy toward domain-led platforms, aligning portfolio, GTM and M&A around bold deep-tech bets.
 
 In 2007 I joined my brother’s small digital agency, [Distilled](http://www.distilled.net), and made tinkering with SEO, content and digital strategy a business. 1 office turned into 3, NYC became home base, the business became what is known as “known.” 
 
