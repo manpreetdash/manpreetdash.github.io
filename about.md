@@ -37,7 +37,7 @@ z-index:-1
 <div class="pl3 pb4 w-90">
 <strong>Bosch | Corporate Strategy & Transformation </strong>
 <div class="black-50 f6">2024 - 2025 | Bengaluru, India </div>
-<div class="lh-copy f5">Defining and implementing the strategy and growth plan for 2030 Horizon, targeting a 5x revenue growth through multiple fields of action: Portfolio & Sales Redesign, Innovation, Inorganic Growth (M&A), AI.</div>
+<div class="lh-copy f5">Defined and implemented the strategy and growth plan for 2030 Horizon, targeting a 5x revenue growth through multiple fields of action: Portfolio & Sales Redesign, Innovation, Inorganic Growth (M&A), AI.</div>
 </div>
 </div>
 
