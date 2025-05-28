@@ -1,7 +1,7 @@
 ---
 title: "a-homestead-bit"
 date_saved: 2022-03-07
-tags: ["microblog"]
+tags: ["microblog", "my-events"]
 link: "http://tomcritchlow.micro.blog/2022/03/07/a-homestead-bit.html"
 ---
 First, Brian Lovin on a perspective around incrementally correct personal sites:
