@@ -84,6 +84,18 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative">
 <div class="greentimeline"></div>
+<img src="https://www.google.com/s2/favicons?domain=weforum.org&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+</div>
+<div class="pl3 pb4 w-90">
+<strong>World Economic Forum</strong>
+<div class="black-50 f6">2025 - Present</div>
+<div class="lh-copy f5">In collaboration with the World Economic Forum’s Global Foresight Network (GFN) and the Global Shapers Community, this initiative empowers a cohort of 50 emerging leaders to develop and advance policies that prioritize the interests of both present and future generations.</div>
+</div>
+</div>
+
+<div class="flex items-stretch">
+<div class="relative">
+<div class="greentimeline"></div>
 <img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
@@ -96,12 +108,12 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative">
 <div class="greentimeline"></div>
-<img src="https://www.google.com/s2/favicons?domain=weforum.org&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+<img src="https://www.google.com/s2/favicons?domain=mckinsey.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>World Economic Forum</strong>
+<strong>McKinsey & Company</strong>
 <div class="black-50 f6">2025 - Present</div>
-<div class="lh-copy f5">In collaboration with the World Economic Forum’s Global Foresight Network (GFN) and the Global Shapers Community, this initiative empowers a cohort of 50 emerging leaders to develop and advance policies that prioritize the interests of both present and future generations.</div>
+<div class="lh-copy f5">Member of McKinsey's Forward Learner's Program. </div>
 </div>
 </div>
 
