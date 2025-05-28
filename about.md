@@ -26,10 +26,10 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative ">
 <div class="greentimeline"></div>
-<img src="https://www.google.com/s2/favicons?domain=tomcritchlow.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+<img src="https://www.google.com/s2/favicons?domain=bosch.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Independent Consultant</strong>
+<strong>Bosch</strong>
 <div class="black-50 f6">2014 - Present</div>
 <div class="lh-copy f5">Helping media and technology companies build new growth capabilities through product innovation, SEO programs, content marketing and brand. Working with clients like The New York Times, Gartner, Etsy, Angi, Finder, Dotdash, Ziff Davis and more.</div>
 </div>
@@ -38,10 +38,10 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative">
 <div class="greentimeline"></div>
-<img src="https://www.google.com/s2/favicons?domain=seomba.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+<img src="https://www.google.com/s2/favicons?domain=rheonics.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Launched the SEO MBA</strong>
+<strong>Rheonics</strong>
 <div class="black-50 f6">2021 - Present</div>
 <div class="lh-copy f5">Launched a professional development platform for SEO professionals.  </div>
 </div>
@@ -50,10 +50,10 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative">
 <div class="greentimeline"></div>
-<img src="https://www.google.com/s2/favicons?domain=fiercelycurious.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+<img src="https://www.google.com/s2/favicons?domain=perplexity.ai&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Launched Fiercely Curious</strong>
+<strong>Perplexity</strong>
 <div class="black-50 f6">2013 - Present</div>
 <div class="lh-copy f5">Created Fiercely Curious, a Brooklyn art collective with pop-up art shows around Brooklyn and custom art installations for private and corporate clients.</div>
 </div>
@@ -65,7 +65,7 @@ z-index:-1
 <img src="https://www.google.com/s2/favicons?domain=google.com&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
-<strong>Google: PMM Special Projects</strong>
+<strong>World Economic Forum</strong>
 <div class="black-50 f6">2012 - 2014</div>
 <div class="lh-copy f5">Working with internal innovation teams like the Creative Lab, Google Cardboard, Jamboard and BizOps I helped to ideate, develop and bring to market new products and services. With one foot in creative and one foot in business I helped to add rigor to creative ideas and creativity to spreadsheets.</div>
 </div>
