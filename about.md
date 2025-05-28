@@ -36,7 +36,7 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Bosch | Corporate Strategy & Transformation </strong>
-<div class="black-50 f6">2024 - 2025</div>
+<div class="black-50 f6">2024 - 2025 | Bengaluru, India </div>
 <div class="lh-copy f5">Defining and implementing the strategy and growth plan for 2030 Horizon, targeting a 5x revenue growth through multiple fields of action: Portfolio & Sales Redesign, Innovation, Inorganic Growth (M&A), AI.</div>
 </div>
 </div>
@@ -48,7 +48,7 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Bosch AIShield | Product Marketing & Business Development </strong>
-<div class="black-50 f6">2022 - 2024</div>
+<div class="black-50 f6">2022 - 2024 | Bengaluru, India</div>
 <div class="lh-copy f5">First Business Hire. Led end-to-end setup of marketing, sales, partnerships, community building, operations, and recruitment. Instrumental in securing key PoCs, clients, integrations and strategic partnerships and setting up the 0 to 1 in AIShield Business. Led to $1M+ revenue in 24 months. </div>
 </div>
 </div>
@@ -60,7 +60,7 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Rheonics | Market Development, Quality & Certifications, Product Management </strong>
-<div class="black-50 f6">2017 - 2022</div>
+<div class="black-50 f6">2017 - 2022 | Winterthur, Switzerland </div>
 <div class="lh-copy f5">Expanded market footprint, developed partnerships, and led global marketing, contributing to >50% YoY growth. Authored 40+ technical notes, drove multi-channel marketing efforts, trained and expanded distributor network and achieved industry recognition. </div>
 </div>
 </div>
