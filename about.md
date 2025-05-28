@@ -60,7 +60,7 @@ z-index:-1
 </div>
 <div class="pl3 pb4 w-90">
 <strong>Rheonics | Market Development, Quality & Certifications, Product Management </strong>
-<div class="black-50 f6">2021 - Present</div>
+<div class="black-50 f6">2017 - 2022</div>
 <div class="lh-copy f5">Expanded market footprint, developed partnerships, and led global marketing, contributing to >50% YoY growth. Authored 40+ technical notes, drove multi-channel marketing efforts, trained and expanded distributor network and achieved industry recognition. </div>
 </div>
 </div>
