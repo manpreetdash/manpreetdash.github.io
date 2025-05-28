@@ -1,8 +1,8 @@
 ---
 layout: blog
-title: Digital Annotations & Marginalia
-objective: Build alternative forms of comments and enable close-reading and discussion for the independent web.
-key-question: How do we foster discussion, dialogue and close-reading for small independent websites?
+title: Artificial Intelligence
+objective: Build a simple understanding about Artificial intelligence
+key-question: How should we look at AI and developments?
 arena-channels:
 - annotations-marginalia
 ---
