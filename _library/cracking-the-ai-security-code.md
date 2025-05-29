@@ -1,6 +1,6 @@
 ---
 title: "Cracking the AI Security Code"
-link: ""
+link: "https://issuu.com/securitymiddleeastmagazine/docs/sme137_digital/52"
 date_saved: 2024-04-25
 tags: ['artificial-intelligence', 'cybersecurity']
 author: ""
