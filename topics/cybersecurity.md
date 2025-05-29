@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: cybersecurity
+title: Cybersecurity
 objective: Expand knowledge in cybersecurity. 
 key-question: What trends must we be aware of in cybersecurity?
 # arena-channels:
