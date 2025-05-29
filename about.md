@@ -3,9 +3,9 @@ layout: blog
 title: Background
 ---
 
-Deep-tech shifts the market when someone architects its leap from technology and proof-of-concept to product/platform. I’m drawn to technologies that feel “too early” until they’re inevitable - and to teams that turn them into reality. 
+I operate at the intersection of Product Growth, Business Strategy, & Deep Tech. 
 
-Builder, operator, evangelist, strategist - four lenses, one pursuit: making frontier ideas in AI, cybersecurity and industrial automation/SaaS change the world. 
+Deep-tech shifts the market when someone architects its leap from technology and proof-of-concept to product/platform. I’m drawn to technologies that feel “too early” until they’re inevitable - and to teams that turn them into reality. Builder, operator, evangelist, strategist - four lenses, one pursuit: making frontier ideas in AI, cybersecurity and industrial automation/SaaS change the world. 
 
 I'm always happy to grab a coffee or a zoom!
 
