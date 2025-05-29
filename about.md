@@ -152,10 +152,11 @@ When AI began reshaping industry, I joined Bosch AIShield to help define — and
 
 Before starting my MBA, I embedded with Bosch’s software division to see strategy at its largest scale. There I helped steer executive focus toward domain-led platforms, aligning the portfolio, GTM, and M&A pipeline around bold deep-tech bets.
 
-I learned a couple things along the way. 
+I learned a few things along the way. 
 
+- AI firepower paired with judgement, trust, and connection is where most leverage lives.
 - Effecting change is hard and incremental momentum is the key to success.
-- Managing and hiring people is rooted in unlocking potential, not judging performance.
+- Managing and hiring people is rooted in unlocking potential, leading with clarity, empathy and earned influence, not judging performance.
 
 
 ## Get in touch
