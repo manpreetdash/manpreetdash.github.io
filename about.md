@@ -134,6 +134,18 @@ z-index:-1
 <div class="flex items-stretch">
 <div class="relative">
 <div class="greentimeline"></div>
+<img src="https://www.google.com/s2/favicons?domain=kellogg.northwestern.edu&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
+</div>
+<div class="pl3 pb4 w-90">
+<strong>Kellogg School of Management at Northwestern University  </strong>
+<div class="black-50 f6">2025 - 2027</div>
+<div class="lh-copy f5">MBA (2Y, Full Time) </div>
+</div>
+</div>
+
+<div class="flex items-stretch">
+<div class="relative">
+<div class="greentimeline"></div>
 <img src="https://www.google.com/s2/favicons?domain=www.iitkgp.ac.in&sz=256" class="ba v-mid dib bg-white pa1 b--black-10 h2 br-100">
 </div>
 <div class="pl3 pb4 w-90">
