@@ -63,7 +63,7 @@
   
   <div class="pa3 overflow-x-scroll overflow-auto-l nowrap ws-normal-l">
     <span class="dib dn-l">Tags: </span>
-  {% for tag in tags | limit: 15 %}
+  {% for tag in tags | limit: 20 %}
   {% if tag != null and tag != "" %}
   <a href="/library/?query=tag%3A{{tag}}" class="f6 dib pa2 mr2 bg-light-gray newgreen b br2 link">{{tag}}</a>
   {% endif %}
