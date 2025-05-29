@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: Background
+title: About Me
 ---
 
 I operate at the intersection of Product Growth, Business Strategy, & Deep Tech. 
