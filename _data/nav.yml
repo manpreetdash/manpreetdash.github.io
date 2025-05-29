@@ -18,12 +18,12 @@ main_links:
     feathericon: search
     url: "/search"        
 groups:            
-  - group_name: Hire me
+  - group_name: WHAT I BRING
     links:
-      - name: Consulting
+      - name: Key Projects & Skills
         feathericon: git-merge
         url: "/consulting"
-      - name: Advisor
+      - name: Impact 
         feathericon: git-pull-request
         url: "/advisor"
   - group_name: Elsewhere
