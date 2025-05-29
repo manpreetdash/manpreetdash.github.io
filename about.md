@@ -161,7 +161,7 @@ I learned a few things along the way.
 
 ## Get in touch
 
-I'm always happy to meet interesting people for coffee. Email is here: [tjcritchlow@gmail.com](mailto:tjcritchlow@gmail.com)
+I'm always happy to meet interesting people for coffee. Email is here:  [mdmanpreetdash@gmail.com](mailto:mdmanpreetdash@gmail.com)
 
 ![Me.](/images/2025-05-28-manpreet-headshot.png)
 
