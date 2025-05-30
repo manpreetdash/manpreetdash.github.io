@@ -14,4 +14,4 @@ All things considered, it was a much messier year than I intended,
 but with many good pockets mixed in with the mess."
 ---
 
-A lovely bouncing retro something
+A lovely good bouncing retro something
