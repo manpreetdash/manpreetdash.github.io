@@ -9,7 +9,7 @@ You’re buzzing, &#8220;partly from the free beer, partly from just meeting som
 
 I used to blink in this situation and miss the opportunity but I was once told by a wise man - “always know how people can help you out” - and I’ve lived by it ever since.
 
-You see people mean well - there’s a lot of ambient goodwill floating around that you can leverage. But you have to do the work to leverage it. When you hear “let me know how I can help” you shouldn’t just shrug it off and say thanks - instead it pays to have a top of mind list of things that you’re actively looking for help with.
+There’s a lot of ambient goodwill floating around that you can leverage. But you have to do the work to leverage it. When you hear “let me know how I can help” you shouldn’t just shrug it off and say thanks - instead it pays to have a top of mind list of things that you’re actively looking for help with.
 
 Similar to “Ask HN” or “Show HN” I’d love to see a similar goodwill meme such as “HMO” - “help me out”. To that end - I’m posting my current top of mind list below and I encourage you to post your own and ping me. I’ll see if I can help out at all!
 
