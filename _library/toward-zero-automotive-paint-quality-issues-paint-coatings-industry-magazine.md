@@ -12,6 +12,5 @@ author:
 image: ''
 description:
 ---
-Outlines strategies for achieving higher quality and sustainability in automotive paint applications using smart sensing.
-
+Outlines strategies for achieving higher quality and sustainability in automotive paint applications using smart sensing...
 &nbsp;
