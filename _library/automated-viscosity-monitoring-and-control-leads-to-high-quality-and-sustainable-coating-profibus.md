@@ -5,5 +5,5 @@ date_saved: 2022-02-08
 tags: ['industrial-automation', 'sustainability', 'my-publications']
 author: ""
 image: ""
-description: "Explains how automation and real-time monitoring improve coating quality and reduce waste in manufacturing."
+description: "Explains us how automation and real-time monitoring improve coating quality and reduce waste in manufacturing."
 ---
